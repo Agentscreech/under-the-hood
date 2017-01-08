@@ -1,26 +1,78 @@
 var db = require('../models');
 
-var fuel = ["regular", "plus", "premium", "diesel"];
-var oil = ["0W-30", "0W-40", "5W-40", "5W-30", "10W-30", "10W-40", "15W-40", "20W-50"];
-var wipers = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
-var tireBrands = ["Bridgestone", "BFGoodrich", "Michelin", "Continental", "Pirelli", "Cooper", "Dunlop", "Goodyear", "Hancook", "Hoosier", "Kumho", "Firestone", "Uniroyal", "Falken", "Sumitomo", "Nitto", "Toyo"];
-var users = {
-    rick: {
+//populate users
+var users = [
+    {
         email: "showmewhatyougot@getschwifty.com",
         password: "takingroyoffthegrid",
         name: "Rick Sanchez"
     },
-    morty: {
+    {
         email: "geeidontknowrick@awwman.com",
         password: "summerisabitch",
         name: "Morty Smith"
     },
-    michael: {
+    {
         email: "needsomeonedead@imyourguy.com",
         password: "hereigokillinagain",
         name: "Krombopulos Michael"
     }
-};
+];
+function buildUsers(item){
+    item.forEach(function(user){
+        db.user.findOrCreate({
+            where: {
+                email:user.email,
+                password:user.password,
+                name:user.name
+            }
+        });
+    });
+}
+buildUsers(users);
+//populate cars,
+
+//populate fuel
+var fuel = ["regular", "plus", "premium", "diesel"];
+function buildFuel(item){
+    item.forEach(function(fuel){
+        db.fuel.findOrCreate({where:{grade:fuel}});
+    });
+}
+buildFuel(fuel);
+
+
+//populate oil
+var oil = ["0W-30", "0W-40", "5W-40", "5W-30", "10W-30", "10W-40", "15W-40", "20W-50"];
+function buildOil(item){
+    item.forEach(function(oil){
+        db.oil.findOrCreate({where:{weight:oil}});
+    });
+}
+buildOil(oil);
+
+//populate wipers
+var wipers = ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'];
+function buildWiper(item){
+    item.forEach(function(wiper){
+        db.wiper.findOrCreate({where:{length:wiper}});
+    });
+}
+buildWiper(wipers);
+
+//populate tireBrands
+var tireBrands = ["Bridgestone", "BFGoodrich", "Michelin", "Continental", "Pirelli", "Cooper", "Dunlop", "Goodyear", "Hancook", "Hoosier", "Kumho", "Firestone", "Uniroyal", "Falken", "Sumitomo", "Nitto", "Toyo"];
+function buildTireBrand(item){
+    item.forEach(function(tirebrand){
+        db.tireBrand.findOrCreate({where:{name:tirebrand}});
+    });
+}
+buildTireBrand(tireBrands);
+//populate tireSizes
+
+
+
+
 
 var cars = {
     rick: {
@@ -2961,7 +3013,7 @@ var cars = {
     }
 };
 
-var carTireSizes = ["105","115","125","135","145","155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345","355","365","375","385","395","405"],[ "25","30","35","40","45","50","55","60","65","70","75","80","85","90"],[ "13","14","15","16","17","18","19","20","21","22","23","24","26","28","30"];  //jshint ignore:line
+var carTireSizes = [["105","115","125","135","145","155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345","355","365","375","385","395","405"],["25","30","35","40","45","50","55","60","65","70","75","80","85","90"],["13","14","15","16","17","18","19","20","21","22","23","24","26","28","30"]];
 
 var validCarTires = ["215/50R13",
     "225/45R13",
