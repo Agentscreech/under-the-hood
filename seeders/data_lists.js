@@ -68,11 +68,10 @@ function buildTireBrand(item){
     });
 }
 buildTireBrand(tireBrands);
-//populate tireSizes
 
 
 
-
+var carTireSizes=[["105","115","125","135","145","155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345","355","365","375","385","395","405"],["25","30","35","40","45","50","55","60","65","70","75","80","85","90"],["13","14","15","16","17","18","19","20","21","22","23","24","26","28","30"]];
 
 var cars = {
     rick: {
@@ -3013,9 +3012,11 @@ var cars = {
     }
 };
 
-var carTireSizes = [["105","115","125","135","145","155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345","355","365","375","385","395","405"],["25","30","35","40","45","50","55","60","65","70","75","80","85","90"],["13","14","15","16","17","18","19","20","21","22","23","24","26","28","30"]];
+//populate tireSizes
 
-var validCarTires = ["215/50R13",
+
+
+var carTires = ["215/50R13",
     "225/45R13",
     "225/50R13",
     "255/40R13",
@@ -3641,6 +3642,22 @@ var validCarTires = ["215/50R13",
     "295/25R28",
     "325/35R28",
     "315/30R30"];
+
+function buildTireSizes(item){
+    item.forEach(function(tire){
+        var tireWidth = tire.substring(0,3);
+        var tireHeight = tire.substring(4,6);
+        var tireRim = tire.substring(7,9);
+        db.tireSize.findOrCreate({
+            where:{
+                width: tireWidth,
+                height: tireHeight,
+                rim: tireRim
+            }
+        });
+    });
+}
+buildTireSizes(carTires);
 
 var truckTireSizes = [ '21x10R13',
   '22X8R13',

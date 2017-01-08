@@ -17,9 +17,6 @@ module.exports = {
       rim: {
         type: Sequelize.STRING
       },
-      truck: {
-        type: Sequelize.TEXT
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
