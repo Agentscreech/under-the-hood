@@ -1,4 +1,4 @@
-var db = require('./models');
+// var db = require('./models');
 
 var fuel = ["regular", "plus", "premium", "diesel"];
 var oil = ["0W-30", "0W-40", "5W-40", "5W-30", "10W-30", "10W-40", "15W-40", "20W-50"];
@@ -623,7 +623,6 @@ var cars = {
         style: "Turbo 3dr Hatchback w/Black Interior (1.6L 4cyl Turbo 6M)",
         userId: 2,
         styleDetails: {
-            "styles": [{
                 "make": {
                     "id": 200001398,
                     "name": "Hyundai",
@@ -981,3795 +980,7 @@ var cars = {
                     "highway": "35",
                     "city": "24"
                 }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200424112",
-                    "name": "DCT Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 132,
-                    "torque": 120,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200423075",
-                    "name": "6A",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "AUTOMATED_MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423089",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CT"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }]
-                }, {
-                    "category": "Mechanical",
-                    "options": [{
-                        "id": "200445743",
-                        "name": "Remote Start",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Remote Start",
-                        "manufactureOptionCode": "RK"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423094",
-                        "name": "Tech Package",
-                        "description": "Vehicle with standard equipment; Rear backup warning sensors; Unique 18\" alloy wheels with exterior color painted inserts; P215/40R18; Navigation system with rearview camera; Automatic headlights; Proximity key entry with electronic push button start; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Tech Package",
-                        "manufactureOptionCode": "03"
-                    }, {
-                        "id": "200423093",
-                        "name": "Style Package",
-                        "description": "Vehicle with standard equipment; 18\" alloy wheels with P215/40R18 tires; Chrome grille surround with piano black highlights; Front fog lights; Panoramic sunroof; Piano black interior accents; 450-watt Dimension premium audio system with AM/FM/XM satellite radio/CD/MP3 with 8 speakers including external amplifier and subwoofer; Leatherette bolster seats and door inserts; Leather wrapped steering wheel and shift knob; Alloy pedals; Driver auto up/down window",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Style Package",
-                        "manufactureOptionCode": "02"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423204",
-                        "name": "Graphic Package (Graphic Disco)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Graphic Disco)",
-                        "manufactureOptionCode": "GD"
-                    }, {
-                        "id": "200423203",
-                        "name": "Graphic Package (Lower Body)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Lower Body)",
-                        "manufactureOptionCode": "LG"
-                    }, {
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423080",
-                        "name": "Gray Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Gray",
-                        "manufactureOptionCode": "GY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 97,
-                                "g": 102,
-                                "b": 103,
-                                "hex": "616667"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }, {
-                        "id": "200423209",
-                        "name": "Black Cloth/Leatherette",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Cloth/Leatherette",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 32,
-                                "g": 38,
-                                "b": 42,
-                                "hex": "20262A"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "vinyl/cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0312F45",
-                "price": {
-                    "baseMSRP": 18850.0,
-                    "baseInvoice": 18170.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 10865.0,
-                    "usedPrivateParty": 9319.0,
-                    "usedTradeIn": 7576.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200423072,
-                "name": "3dr Hatchback w/Gray Interior (1.6L 4cyl 6AM)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Base",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "28"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200423074",
-                    "name": "1.6L Inline4 16 Valve   Gas Regular Unleaded",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 138,
-                    "torque": 123,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200378201",
-                    "name": "6M",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423089",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CT"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }, {
-                        "id": "200423094",
-                        "name": "Tech Package",
-                        "description": "Vehicle with standard equipment; Rear backup warning sensors; Unique 18\" alloy wheels with exterior color painted inserts; P215/40R18; Navigation system with rearview camera; Automatic headlights; Proximity key entry with electronic push button start; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Tech Package",
-                        "manufactureOptionCode": "03"
-                    }, {
-                        "id": "200423093",
-                        "name": "Style Package",
-                        "description": "Vehicle with standard equipment; 18\" alloy wheels with P215/40R18 tires; Chrome grille surround with piano black highlights; Front fog lights; Panoramic sunroof; Piano black interior accents; 450-watt Dimension premium audio system with AM/FM/XM satellite radio/CD/MP3 with 8 speakers including external amplifier and subwoofer; Leatherette bolster seats and door inserts; Leather wrapped steering wheel and shift knob; Alloy pedals; Driver auto up/down window",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Style Package",
-                        "manufactureOptionCode": "02"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }, {
-                        "id": "200423204",
-                        "name": "Graphic Package (Graphic Disco)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Graphic Disco)",
-                        "manufactureOptionCode": "GD"
-                    }, {
-                        "id": "200423203",
-                        "name": "Graphic Package (Lower Body)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Lower Body)",
-                        "manufactureOptionCode": "LG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423080",
-                        "name": "Gray Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Gray",
-                        "manufactureOptionCode": "GY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 97,
-                                "g": 102,
-                                "b": 103,
-                                "hex": "616667"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }, {
-                        "id": "200423209",
-                        "name": "Black Cloth/Leatherette",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Cloth/Leatherette",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 32,
-                                "g": 38,
-                                "b": 42,
-                                "hex": "20262A"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "vinyl/cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0313F45",
-                "price": {
-                    "baseMSRP": 17600.0,
-                    "baseInvoice": 16983.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 10214.0,
-                    "usedPrivateParty": 8719.0,
-                    "usedTradeIn": 7033.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200423073,
-                "name": "3dr Hatchback w/Gray Interior (1.6L 4cyl 6M)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Base",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "27"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200424112",
-                    "name": "DCT Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 132,
-                    "torque": 120,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200423075",
-                    "name": "6A",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "AUTOMATED_MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423077",
-                        "name": "Black Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423082",
-                        "name": "Marathon Blue",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Marathon Blue",
-                        "manufactureOptionCode": "UU9",
-                        "colorChips": {
-                            "primary": {
-                                "r": 48,
-                                "g": 74,
-                                "b": 193,
-                                "hex": "304AC1"
-                            }
-                        }
-                    }, {
-                        "id": "200423076",
-                        "name": "26.2 Yellow",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "26.2 Yellow",
-                        "manufactureOptionCode": "SYY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 217,
-                                "g": 209,
-                                "b": 122,
-                                "hex": "D9D17A"
-                            }
-                        }
-                    }, {
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200445739",
-                        "name": "Sprint Gray",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Sprint Gray",
-                        "manufactureOptionCode": "SG2",
-                        "colorChips": {
-                            "primary": {
-                                "r": 196,
-                                "g": 195,
-                                "b": 200,
-                                "hex": "C4C3C8"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0342F45",
-                "price": {
-                    "baseMSRP": 21300.0,
-                    "baseInvoice": 20498.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 12085.0,
-                    "usedPrivateParty": 10450.0,
-                    "usedTradeIn": 8606.0,
-                    "estimateTmv": false
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200445738,
-                "name": "RE:MIX 3dr Hatchback w/Black Interior (1.6L 4cyl 6AM)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "RE:MIX",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "28"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200423074",
-                    "name": "1.6L Inline4 16 Valve   Gas Regular Unleaded",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 138,
-                    "torque": 123,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200378201",
-                    "name": "6M",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423089",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CT"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423093",
-                        "name": "Style Package",
-                        "description": "Vehicle with standard equipment; 18\" alloy wheels with P215/40R18 tires; Chrome grille surround with piano black highlights; Front fog lights; Panoramic sunroof; Piano black interior accents; 450-watt Dimension premium audio system with AM/FM/XM satellite radio/CD/MP3 with 8 speakers including external amplifier and subwoofer; Leatherette bolster seats and door inserts; Leather wrapped steering wheel and shift knob; Alloy pedals; Driver auto up/down window",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Style Package",
-                        "manufactureOptionCode": "02"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }, {
-                        "id": "200423094",
-                        "name": "Tech Package",
-                        "description": "Vehicle with standard equipment; Rear backup warning sensors; Unique 18\" alloy wheels with exterior color painted inserts; P215/40R18; Navigation system with rearview camera; Automatic headlights; Proximity key entry with electronic push button start; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Tech Package",
-                        "manufactureOptionCode": "03"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }, {
-                        "id": "200423204",
-                        "name": "Graphic Package (Graphic Disco)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Graphic Disco)",
-                        "manufactureOptionCode": "GD"
-                    }, {
-                        "id": "200423203",
-                        "name": "Graphic Package (Lower Body)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Lower Body)",
-                        "manufactureOptionCode": "LG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200473290",
-                        "name": "Red Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Red",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 96,
-                                "g": 39,
-                                "b": 41,
-                                "hex": "602729"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }, {
-                        "id": "200423209",
-                        "name": "Black Cloth/Leatherette",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Cloth/Leatherette",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 32,
-                                "g": 38,
-                                "b": 42,
-                                "hex": "20262A"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "vinyl/cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0323F45",
-                "price": {
-                    "baseMSRP": 17600.0,
-                    "baseInvoice": 16983.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 10242.0,
-                    "usedPrivateParty": 8739.0,
-                    "usedTradeIn": 7045.0,
-                    "estimateTmv": false
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200473291,
-                "name": "3dr Hatchback w/Red Interior (1.6L 4cyl 6M)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Base",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "27"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200424112",
-                    "name": "DCT Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 132,
-                    "torque": 120,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200423075",
-                    "name": "6A",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "AUTOMATED_MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200423089",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CT"
-                    }]
-                }, {
-                    "category": "Mechanical",
-                    "options": [{
-                        "id": "200445743",
-                        "name": "Remote Start",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Remote Start",
-                        "manufactureOptionCode": "RK"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423093",
-                        "name": "Style Package",
-                        "description": "Vehicle with standard equipment; 18\" alloy wheels with P215/40R18 tires; Chrome grille surround with piano black highlights; Front fog lights; Panoramic sunroof; Piano black interior accents; 450-watt Dimension premium audio system with AM/FM/XM satellite radio/CD/MP3 with 8 speakers including external amplifier and subwoofer; Leatherette bolster seats and door inserts; Leather wrapped steering wheel and shift knob; Alloy pedals; Driver auto up/down window",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Style Package",
-                        "manufactureOptionCode": "02"
-                    }, {
-                        "id": "200423094",
-                        "name": "Tech Package",
-                        "description": "Vehicle with standard equipment; Rear backup warning sensors; Unique 18\" alloy wheels with exterior color painted inserts; P215/40R18; Navigation system with rearview camera; Automatic headlights; Proximity key entry with electronic push button start; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Tech Package",
-                        "manufactureOptionCode": "03"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }, {
-                        "id": "200423204",
-                        "name": "Graphic Package (Graphic Disco)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Graphic Disco)",
-                        "manufactureOptionCode": "GD"
-                    }, {
-                        "id": "200423203",
-                        "name": "Graphic Package (Lower Body)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Lower Body)",
-                        "manufactureOptionCode": "LG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200473290",
-                        "name": "Red Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Red",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 96,
-                                "g": 39,
-                                "b": 41,
-                                "hex": "602729"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }, {
-                        "id": "200423209",
-                        "name": "Black Cloth/Leatherette",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Cloth/Leatherette",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 32,
-                                "g": 38,
-                                "b": 42,
-                                "hex": "20262A"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "vinyl/cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0322F45",
-                "price": {
-                    "baseMSRP": 18850.0,
-                    "baseInvoice": 18170.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 10741.0,
-                    "usedPrivateParty": 9193.0,
-                    "usedTradeIn": 7448.0,
-                    "estimateTmv": false
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200473292,
-                "name": "3dr Hatchback w/Red Interior (1.6L 4cyl 6AM)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Base",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "28"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200423074",
-                    "name": "1.6L Inline4 16 Valve   Gas Regular Unleaded",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 138,
-                    "torque": 123,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200378201",
-                    "name": "6M",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423077",
-                        "name": "Black Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423082",
-                        "name": "Marathon Blue",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Marathon Blue",
-                        "manufactureOptionCode": "UU9",
-                        "colorChips": {
-                            "primary": {
-                                "r": 48,
-                                "g": 74,
-                                "b": 193,
-                                "hex": "304AC1"
-                            }
-                        }
-                    }, {
-                        "id": "200445739",
-                        "name": "Sprint Gray",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Sprint Gray",
-                        "manufactureOptionCode": "SG2",
-                        "colorChips": {
-                            "primary": {
-                                "r": 196,
-                                "g": 195,
-                                "b": 200,
-                                "hex": "C4C3C8"
-                            }
-                        }
-                    }, {
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423076",
-                        "name": "26.2 Yellow",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "26.2 Yellow",
-                        "manufactureOptionCode": "SYY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 217,
-                                "g": 209,
-                                "b": 122,
-                                "hex": "D9D17A"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0343F45",
-                "price": {
-                    "baseMSRP": 20050.0,
-                    "baseInvoice": 19310.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 11914.0,
-                    "usedPrivateParty": 10309.0,
-                    "usedTradeIn": 8499.0,
-                    "estimateTmv": false
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200445737,
-                "name": "RE:MIX 3dr Hatchback w/Black Interior (1.6L 4cyl 6M)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "RE:MIX",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "27"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200378200",
-                    "name": "Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 9.5,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 201,
-                    "torque": 195,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4ITCG1.6",
-                    "compressorType": "turbocharger",
-                    "rpm": {
-                        "horsepower": 6000,
-                        "torque": 1750
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200423132",
-                    "name": "6A",
-                    "equipmentType": "TRANSMISSION",
-                    "automaticType": "Shiftable automatic",
-                    "transmissionType": "AUTOMATIC",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423207",
-                        "name": "Ultimate Package",
-                        "description": "Vehicle with standard equipment; Panoramic sunroof; Rear backup warning sensors; Navigation system with rearview camera; Automatic headlights; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2500.0,
-                            "baseInvoice": 2300.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Ultimate Package",
-                        "manufactureOptionCode": "04"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200445744",
-                        "name": "Michelin Pilot Super Sport Summer Tire",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 1200.0,
-                            "baseInvoice": 1140.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Michelin Pilot Super Sport Summer Tire",
-                        "manufactureOptionCode": "RT"
-                    }, {
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423201",
-                        "name": "Black Leather",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Leather",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            },
-                            "secondary": {
-                                "r": 139,
-                                "g": 139,
-                                "b": 142,
-                                "hex": "8B8B8E"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "leather"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423082",
-                        "name": "Marathon Blue",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Marathon Blue",
-                        "manufactureOptionCode": "UU9",
-                        "colorChips": {
-                            "primary": {
-                                "r": 48,
-                                "g": 74,
-                                "b": 193,
-                                "hex": "304AC1"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423199",
-                        "name": "Elite White",
-                        "equipmentType": "COLOR",
-                        "price": {
-                            "baseMSRP": 200.0,
-                            "baseInvoice": 182.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Elite White",
-                        "manufactureOptionCode": "SW2",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423200",
-                        "name": "Matte Gray",
-                        "equipmentType": "COLOR",
-                        "price": {
-                            "baseMSRP": 1000.0,
-                            "baseInvoice": 910.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Matte Gray",
-                        "manufactureOptionCode": "S2G",
-                        "colorChips": {
-                            "primary": {
-                                "r": 79,
-                                "g": 79,
-                                "b": 81,
-                                "hex": "4F4F51"
-                            }
-                        }
-                    }, {
-                        "id": "200423085",
-                        "name": "Vitamin C",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Vitamin C",
-                        "manufactureOptionCode": "R9A",
-                        "colorChips": {
-                            "primary": {
-                                "r": 192,
-                                "g": 117,
-                                "b": 46,
-                                "hex": "C0752E"
-                            }
-                        }
-                    }, {
-                        "id": "200423081",
-                        "name": "Ironman Silver",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ironman Silver",
-                        "manufactureOptionCode": "RHM",
-                        "colorChips": {
-                            "primary": {
-                                "r": 197,
-                                "g": 197,
-                                "b": 197,
-                                "hex": "C5C5C5"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0352F45",
-                "price": {
-                    "baseMSRP": 23100.0,
-                    "baseInvoice": 21978.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 12539.0,
-                    "usedPrivateParty": 10918.0,
-                    "usedTradeIn": 9090.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback,Performance",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200423130,
-                "name": "Turbo 3dr Hatchback w/Black Interior (1.6L 4cyl Turbo 6A)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Turbo",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6AEDU"],
-                "MPG": {
-                    "highway": "31",
-                    "city": "24"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200378200",
-                    "name": "Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 9.5,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 201,
-                    "torque": 195,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4ITCG1.6",
-                    "compressorType": "turbocharger",
-                    "rpm": {
-                        "horsepower": 6000,
-                        "torque": 1750
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200423132",
-                    "name": "6A",
-                    "equipmentType": "TRANSMISSION",
-                    "automaticType": "Shiftable automatic",
-                    "transmissionType": "AUTOMATIC",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }, {
-                        "id": "200423207",
-                        "name": "Ultimate Package",
-                        "description": "Vehicle with standard equipment; Panoramic sunroof; Rear backup warning sensors; Navigation system with rearview camera; Automatic headlights; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2500.0,
-                            "baseInvoice": 2300.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Ultimate Package",
-                        "manufactureOptionCode": "04"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }, {
-                        "id": "200445744",
-                        "name": "Michelin Pilot Super Sport Summer Tire",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 1200.0,
-                            "baseInvoice": 1140.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Michelin Pilot Super Sport Summer Tire",
-                        "manufactureOptionCode": "RT"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423202",
-                        "name": "Blue Leather",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Blue Leather",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            },
-                            "secondary": {
-                                "r": 72,
-                                "g": 104,
-                                "b": 148,
-                                "hex": "486894"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "leather"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423200",
-                        "name": "Matte Gray",
-                        "equipmentType": "COLOR",
-                        "price": {
-                            "baseMSRP": 1000.0,
-                            "baseInvoice": 910.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Matte Gray",
-                        "manufactureOptionCode": "S2G",
-                        "colorChips": {
-                            "primary": {
-                                "r": 79,
-                                "g": 79,
-                                "b": 81,
-                                "hex": "4F4F51"
-                            }
-                        }
-                    }, {
-                        "id": "200423081",
-                        "name": "Ironman Silver",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ironman Silver",
-                        "manufactureOptionCode": "RHM",
-                        "colorChips": {
-                            "primary": {
-                                "r": 197,
-                                "g": 197,
-                                "b": 197,
-                                "hex": "C5C5C5"
-                            }
-                        }
-                    }, {
-                        "id": "200423199",
-                        "name": "Elite White",
-                        "equipmentType": "COLOR",
-                        "price": {
-                            "baseMSRP": 200.0,
-                            "baseInvoice": 182.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Elite White",
-                        "manufactureOptionCode": "SW2",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0372F45",
-                "price": {
-                    "baseMSRP": 23100.0,
-                    "baseInvoice": 21978.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 12801.0,
-                    "usedPrivateParty": 11099.0,
-                    "usedTradeIn": 9180.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback,Performance",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200423131,
-                "name": "Turbo 3dr Hatchback w/Blue Interior (1.6L 4cyl Turbo 6A)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Turbo",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6AEDU"],
-                "MPG": {
-                    "highway": "31",
-                    "city": "24"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200378200",
-                    "name": "Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 9.5,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 201,
-                    "torque": 195,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4ITCG1.6",
-                    "compressorType": "turbocharger",
-                    "rpm": {
-                        "horsepower": 6000,
-                        "torque": 1750
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200378201",
-                    "name": "6M",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423207",
-                        "name": "Ultimate Package",
-                        "description": "Vehicle with standard equipment; Panoramic sunroof; Rear backup warning sensors; Navigation system with rearview camera; Automatic headlights; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2500.0,
-                            "baseInvoice": 2300.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Ultimate Package",
-                        "manufactureOptionCode": "04"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }, {
-                        "id": "200445744",
-                        "name": "Michelin Pilot Super Sport Summer Tire",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 1200.0,
-                            "baseInvoice": 1140.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Michelin Pilot Super Sport Summer Tire",
-                        "manufactureOptionCode": "RT"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423202",
-                        "name": "Blue Leather",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Blue Leather",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            },
-                            "secondary": {
-                                "r": 72,
-                                "g": 104,
-                                "b": 148,
-                                "hex": "486894"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "leather"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423200",
-                        "name": "Matte Gray",
-                        "equipmentType": "COLOR",
-                        "price": {
-                            "baseMSRP": 1000.0,
-                            "baseInvoice": 910.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Matte Gray",
-                        "manufactureOptionCode": "S2G",
-                        "colorChips": {
-                            "primary": {
-                                "r": 79,
-                                "g": 79,
-                                "b": 81,
-                                "hex": "4F4F51"
-                            }
-                        }
-                    }, {
-                        "id": "200423081",
-                        "name": "Ironman Silver",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ironman Silver",
-                        "manufactureOptionCode": "RHM",
-                        "colorChips": {
-                            "primary": {
-                                "r": 197,
-                                "g": 197,
-                                "b": 197,
-                                "hex": "C5C5C5"
-                            }
-                        }
-                    }, {
-                        "id": "200423199",
-                        "name": "Elite White",
-                        "equipmentType": "COLOR",
-                        "price": {
-                            "baseMSRP": 200.0,
-                            "baseInvoice": 182.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Elite White",
-                        "manufactureOptionCode": "SW2",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0373F45",
-                "price": {
-                    "baseMSRP": 22100.0,
-                    "baseInvoice": 21038.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 12089.0,
-                    "usedPrivateParty": 10499.0,
-                    "usedTradeIn": 8706.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback,Performance",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 101393259,
-                "name": "Turbo 3dr Hatchback w/Blue Interior (1.6L 4cyl Turbo 6M)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Turbo",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6AEDU"],
-                "MPG": {
-                    "highway": "35",
-                    "city": "24"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200423074",
-                    "name": "1.6L Inline4 16 Valve   Gas Regular Unleaded",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 138,
-                    "torque": 123,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200378201",
-                    "name": "6M",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423089",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CT"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423094",
-                        "name": "Tech Package",
-                        "description": "Vehicle with standard equipment; Rear backup warning sensors; Unique 18\" alloy wheels with exterior color painted inserts; P215/40R18; Navigation system with rearview camera; Automatic headlights; Proximity key entry with electronic push button start; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Tech Package",
-                        "manufactureOptionCode": "03"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }, {
-                        "id": "200423093",
-                        "name": "Style Package",
-                        "description": "Vehicle with standard equipment; 18\" alloy wheels with P215/40R18 tires; Chrome grille surround with piano black highlights; Front fog lights; Panoramic sunroof; Piano black interior accents; 450-watt Dimension premium audio system with AM/FM/XM satellite radio/CD/MP3 with 8 speakers including external amplifier and subwoofer; Leatherette bolster seats and door inserts; Leather wrapped steering wheel and shift knob; Alloy pedals; Driver auto up/down window",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Style Package",
-                        "manufactureOptionCode": "02"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423203",
-                        "name": "Graphic Package (Lower Body)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Lower Body)",
-                        "manufactureOptionCode": "LG"
-                    }, {
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }, {
-                        "id": "200423204",
-                        "name": "Graphic Package (Graphic Disco)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Graphic Disco)",
-                        "manufactureOptionCode": "GD"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423209",
-                        "name": "Black Cloth/Leatherette",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Cloth/Leatherette",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 32,
-                                "g": 38,
-                                "b": 42,
-                                "hex": "20262A"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "vinyl/cloth"
-                        }]
-                    }, {
-                        "id": "200423077",
-                        "name": "Black Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423083",
-                        "name": "Triathlon Gray",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Triathlon Gray",
-                        "manufactureOptionCode": "N9S",
-                        "colorChips": {
-                            "primary": {
-                                "r": 125,
-                                "g": 125,
-                                "b": 125,
-                                "hex": "7D7D7D"
-                            }
-                        }
-                    }, {
-                        "id": "200423082",
-                        "name": "Marathon Blue",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Marathon Blue",
-                        "manufactureOptionCode": "UU9",
-                        "colorChips": {
-                            "primary": {
-                                "r": 48,
-                                "g": 74,
-                                "b": 193,
-                                "hex": "304AC1"
-                            }
-                        }
-                    }, {
-                        "id": "200423085",
-                        "name": "Vitamin C",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Vitamin C",
-                        "manufactureOptionCode": "R9A",
-                        "colorChips": {
-                            "primary": {
-                                "r": 192,
-                                "g": 117,
-                                "b": 46,
-                                "hex": "C0752E"
-                            }
-                        }
-                    }, {
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423076",
-                        "name": "26.2 Yellow",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "26.2 Yellow",
-                        "manufactureOptionCode": "SYY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 217,
-                                "g": 209,
-                                "b": 122,
-                                "hex": "D9D17A"
-                            }
-                        }
-                    }, {
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423081",
-                        "name": "Ironman Silver",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ironman Silver",
-                        "manufactureOptionCode": "RHM",
-                        "colorChips": {
-                            "primary": {
-                                "r": 197,
-                                "g": 197,
-                                "b": 197,
-                                "hex": "C5C5C5"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0303F45",
-                "price": {
-                    "baseMSRP": 17600.0,
-                    "baseInvoice": 16983.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 9937.0,
-                    "usedPrivateParty": 8497.0,
-                    "usedTradeIn": 6874.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200423071,
-                "name": "3dr Hatchback w/Black Interior (1.6L 4cyl 6M)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Base",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "27"
-                }
-            }, {
-                "make": {
-                    "id": 200001398,
-                    "name": "Hyundai",
-                    "niceName": "hyundai"
-                },
-                "model": {
-                    "id": "Hyundai_Veloster",
-                    "name": "Veloster",
-                    "niceName": "veloster"
-                },
-                "engine": {
-                    "id": "200424112",
-                    "name": "DCT Engine",
-                    "equipmentType": "ENGINE",
-                    "compressionRatio": 11.0,
-                    "cylinder": 4,
-                    "size": 1.6,
-                    "displacement": 1591.0,
-                    "configuration": "inline",
-                    "fuelType": "regular unleaded",
-                    "horsepower": 132,
-                    "torque": 120,
-                    "totalValves": 16,
-                    "manufacturerEngineCode": "Gamma",
-                    "type": "gas",
-                    "code": "4INAG1.6",
-                    "compressorType": "NA",
-                    "rpm": {
-                        "horsepower": 6300,
-                        "torque": 4850
-                    },
-                    "valve": {
-                        "timing": "variable valve timing",
-                        "gear": "double overhead camshaft"
-                    }
-                },
-                "transmission": {
-                    "id": "200423075",
-                    "name": "6A",
-                    "equipmentType": "TRANSMISSION",
-                    "transmissionType": "AUTOMATED_MANUAL",
-                    "numberOfSpeeds": "6"
-                },
-                "drivenWheels": "front wheel drive",
-                "numOfDoors": "3",
-                "options": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423086",
-                        "name": "Cargo Net",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 50.0,
-                            "baseInvoice": 41.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Net",
-                        "manufactureOptionCode": "CN"
-                    }, {
-                        "id": "200473293",
-                        "name": "Bongiovi Premium Audio",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Bongiovi Premium Audio",
-                        "manufactureOptionCode": "UA"
-                    }, {
-                        "id": "200423206",
-                        "name": "Auto-Dimming Mirror With Homelink",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 275.0,
-                            "baseInvoice": 248.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Auto-Dimming Mirror with Homelink",
-                        "manufactureOptionCode": "HL"
-                    }, {
-                        "id": "200423205",
-                        "name": "Interior Light Kit",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 250.0,
-                            "baseInvoice": 226.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Interior Light Kit",
-                        "manufactureOptionCode": "LK"
-                    }, {
-                        "id": "200423089",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CT"
-                    }, {
-                        "id": "200423087",
-                        "name": "Cargo Tray",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Cargo Tray",
-                        "manufactureOptionCode": "CL"
-                    }, {
-                        "id": "200423088",
-                        "name": "Carpeted Floor Mats",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 110.0,
-                            "baseInvoice": 88.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Carpeted Floor Mats",
-                        "manufactureOptionCode": "CF"
-                    }]
-                }, {
-                    "category": "Mechanical",
-                    "options": [{
-                        "id": "200445743",
-                        "name": "Remote Start",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 350.0,
-                            "baseInvoice": 316.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Remote Start",
-                        "manufactureOptionCode": "RK"
-                    }]
-                }, {
-                    "category": "Safety",
-                    "options": [{
-                        "id": "200423092",
-                        "name": "Wheel Locks",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 55.0,
-                            "baseInvoice": 44.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Wheel Locks",
-                        "manufactureOptionCode": "WL"
-                    }]
-                }, {
-                    "category": "Package",
-                    "options": [{
-                        "id": "200423093",
-                        "name": "Style Package",
-                        "description": "Vehicle with standard equipment; 18\" alloy wheels with P215/40R18 tires; Chrome grille surround with piano black highlights; Front fog lights; Panoramic sunroof; Piano black interior accents; 450-watt Dimension premium audio system with AM/FM/XM satellite radio/CD/MP3 with 8 speakers including external amplifier and subwoofer; Leatherette bolster seats and door inserts; Leather wrapped steering wheel and shift knob; Alloy pedals; Driver auto up/down window",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Style Package",
-                        "manufactureOptionCode": "02"
-                    }, {
-                        "id": "200423094",
-                        "name": "Tech Package",
-                        "description": "Vehicle with standard equipment; Rear backup warning sensors; Unique 18\" alloy wheels with exterior color painted inserts; P215/40R18; Navigation system with rearview camera; Automatic headlights; Proximity key entry with electronic push button start; 115V outlet located in front center console",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 2000.0,
-                            "baseInvoice": 1840.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Tech Package",
-                        "manufactureOptionCode": "03"
-                    }, {
-                        "id": "200423091",
-                        "name": "Option Group 01",
-                        "description": "Vehicle with standard equipment",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 0.0,
-                            "baseInvoice": 0.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Option Group 01",
-                        "manufactureOptionCode": "01"
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423203",
-                        "name": "Graphic Package (Lower Body)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Lower Body)",
-                        "manufactureOptionCode": "LG"
-                    }, {
-                        "id": "200423204",
-                        "name": "Graphic Package (Graphic Disco)",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 195.0,
-                            "baseInvoice": 176.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Graphic Package (Graphic Disco)",
-                        "manufactureOptionCode": "GD"
-                    }, {
-                        "id": "200423090",
-                        "name": "Mudguards",
-                        "equipmentType": "OPTION",
-                        "price": {
-                            "baseMSRP": 95.0,
-                            "baseInvoice": 76.0,
-                            "estimateTmv": false
-                        },
-                        "manufactureOptionName": "Mudguards",
-                        "manufactureOptionCode": "MG"
-                    }]
-                }],
-                "colors": [{
-                    "category": "Interior",
-                    "options": [{
-                        "id": "200423077",
-                        "name": "Black Cloth",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "cloth"
-                        }]
-                    }, {
-                        "id": "200423209",
-                        "name": "Black Cloth/Leatherette",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Black Cloth/Leatherette",
-                        "manufactureOptionCode": "RY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 32,
-                                "g": 38,
-                                "b": 42,
-                                "hex": "20262A"
-                            }
-                        },
-                        "fabricTypes": [{
-                            "name": "FABRIC_TYPE_1",
-                            "value": "vinyl/cloth"
-                        }]
-                    }]
-                }, {
-                    "category": "Exterior",
-                    "options": [{
-                        "id": "200423079",
-                        "name": "Century White",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Century White",
-                        "manufactureOptionCode": "PGU",
-                        "colorChips": {
-                            "primary": {
-                                "r": 250,
-                                "g": 250,
-                                "b": 250,
-                                "hex": "FAFAFA"
-                            }
-                        }
-                    }, {
-                        "id": "200423082",
-                        "name": "Marathon Blue",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Marathon Blue",
-                        "manufactureOptionCode": "UU9",
-                        "colorChips": {
-                            "primary": {
-                                "r": 48,
-                                "g": 74,
-                                "b": 193,
-                                "hex": "304AC1"
-                            }
-                        }
-                    }, {
-                        "id": "200423084",
-                        "name": "Ultra Black",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ultra Black",
-                        "manufactureOptionCode": "MZH",
-                        "colorChips": {
-                            "primary": {
-                                "r": 0,
-                                "g": 0,
-                                "b": 0,
-                                "hex": "000000"
-                            }
-                        }
-                    }, {
-                        "id": "200423076",
-                        "name": "26.2 Yellow",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "26.2 Yellow",
-                        "manufactureOptionCode": "SYY",
-                        "colorChips": {
-                            "primary": {
-                                "r": 217,
-                                "g": 209,
-                                "b": 122,
-                                "hex": "D9D17A"
-                            }
-                        }
-                    }, {
-                        "id": "200423083",
-                        "name": "Triathlon Gray",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Triathlon Gray",
-                        "manufactureOptionCode": "N9S",
-                        "colorChips": {
-                            "primary": {
-                                "r": 125,
-                                "g": 125,
-                                "b": 125,
-                                "hex": "7D7D7D"
-                            }
-                        }
-                    }, {
-                        "id": "200423078",
-                        "name": "Boston Red",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Boston Red",
-                        "manufactureOptionCode": "P9R",
-                        "colorChips": {
-                            "primary": {
-                                "r": 180,
-                                "g": 27,
-                                "b": 3,
-                                "hex": "B41B03"
-                            }
-                        }
-                    }, {
-                        "id": "200423081",
-                        "name": "Ironman Silver",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Ironman Silver",
-                        "manufactureOptionCode": "RHM",
-                        "colorChips": {
-                            "primary": {
-                                "r": 197,
-                                "g": 197,
-                                "b": 197,
-                                "hex": "C5C5C5"
-                            }
-                        }
-                    }, {
-                        "id": "200423085",
-                        "name": "Vitamin C",
-                        "equipmentType": "COLOR",
-                        "manufactureOptionName": "Vitamin C",
-                        "manufactureOptionCode": "R9A",
-                        "colorChips": {
-                            "primary": {
-                                "r": 192,
-                                "g": 117,
-                                "b": 46,
-                                "hex": "C0752E"
-                            }
-                        }
-                    }]
-                }],
-                "manufacturerCode": "F0302F45",
-                "price": {
-                    "baseMSRP": 18850.0,
-                    "baseInvoice": 18170.0,
-                    "deliveryCharges": 795.0,
-                    "usedTmvRetail": 10873.0,
-                    "usedPrivateParty": 9330.0,
-                    "usedTradeIn": 7589.0,
-                    "estimateTmv": false,
-                    "tmvRecommendedRating": 0
-                },
-                "categories": {
-                    "market": "Hatchback",
-                    "EPAClass": "Subcompact Cars",
-                    "vehicleSize": "Compact",
-                    "primaryBodyType": "Car",
-                    "vehicleStyle": "2dr Hatchback",
-                    "vehicleType": "Car"
-                },
-                "id": 200423070,
-                "name": "3dr Hatchback w/Black Interior (1.6L 4cyl 6AM)",
-                "year": {
-                    "id": 100535749,
-                    "year": 2013
-                },
-                "submodel": {
-                    "body": "Hatchback",
-                    "modelName": "Veloster Hatchback",
-                    "niceName": "hatchback"
-                },
-                "trim": "Base",
-                "states": ["USED"],
-                "squishVins": ["KMHTC6ADDU"],
-                "MPG": {
-                    "highway": "37",
-                    "city": "28"
-                }
-            }],
-            "stylesCount": 12
-        },
+            },
         serviceDetails: {
             "actionHolder": [{
                 "id": 1902596,
@@ -6752,7 +2963,9 @@ var cars = {
 
 //size reg expression = (\d{3}/\d{2}R\d{2})
 // ([234]\dX\dR\d\d)|([234]\dX\d\dR\d\d)|([234]\d\.5X\dR\d\d)|([234]\d\.5X\d\dR\d\d)|([234]\d\.5X\d\d\.5R\d\d)|([234]\d\.5X\d\.5R\d\d)|([234]\dX\d\.5R\d\d)|([234]\dX\d\d\.5R\d\d)
-var tireSizes = ["215/50R13",
+var carTireSizes = ["105","115","125","135","145","155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345","355","365","375","385","395","405"],[ "25","30","35","40","45","50","55","60","65","70","75","80","85","90"],[ "13","14","15","16","17","18","19","20","21","22","23","24","26","28","30"];  //jshint ignore:line
+
+var validCarTires = ["215/50R13",
     "225/45R13",
     "225/50R13",
     "255/40R13",
@@ -7377,446 +3590,474 @@ var tireSizes = ["215/50R13",
     "315/40R26",
     "295/25R28",
     "325/35R28",
-    "315/30R30",
-    "21x10R13",
-    "22X8R13",
-    "22X8R13",
-    "24.5X8R13",
-    "24.5X8R13",
-    "24.5X9R13",
-    "24.5X9R13",
-    "26X8.5R14",
-    "22X8R15",
-    "22X8R15",
-    "24X4.5R15",
-    "24X5R15",
-    "24X5R15",
-    "24.5X8R15",
-    "24.5X8R15",
-    "26x8.5R15",
-    "26X10R15",
-    "26X10R15",
-    "26X10.5R15",
-    "26X11.5R15",
-    "26X6R15",
-    "26X6R15",
-    "26X7.5R15",
-    "26X8R15",
-    "26X8R15",
-    "26X8.5R15",
-    "27x10R15",
-    "27X10.5R15",
-    "27X9.5R15",
-    "28X10.5R15",
-    "28X11.5R15",
-    "28X12.5R15",
-    "28X13.5R15",
-    "28X4.5R15",
-    "28X7.5R15",
-    "28X9R15",
-    "28X9R15",
-    "29X10.5R15",
-    "29X11.5R15",
-    "29X12.5R15",
-    "29X15.5R15",
-    "29X18R15",
-    "29X18R15",
-    "29X18.5R15",
-    "29X4.5R15",
-    "29X8.5R15",
-    "29.5X9R15",
-    "29.5X9R15",
-    "30X10.5R15",
-    "30X11.5R15",
-    "30X12.5R15",
-    "30X13.5R15",
-    "30X7R15",
-    "30X7R15",
-    "30X9R15",
-    "30X9R15",
-    "30X9.5R15",
-    "31X10.5R15",
-    "31X11R15",
-    "31X11R15",
-    "31X11.5R15",
-    "31X12.5R15",
-    "31X13R15",
-    "31X13R15",
-    "31X13.5R15",
-    "31X14.5R15",
-    "31X16.5R15",
-    "31X18R15",
-    "31X18R15",
-    "31X18.5R15",
-    "31X9.5R15",
-    "32X10.5R15",
-    "32X11.5R15",
-    "32X14R15",
-    "32X14R15",
-    "32X16R15",
-    "32X16R15",
-    "32X17.5R15",
-    "32X18.5R15",
-    "32X9.5R15",
-    "33X10.5R15",
-    "33X11.5R15",
-    "33X12.5R15",
-    "33X13R15",
-    "33X13R15",
-    "33X13.5R15",
-    "33X14R15",
-    "33X14R15",
-    "33X14.5R15",
-    "33X15.5R15",
-    "33X16.5R15",
-    "33X19.5R15",
-    "33X21.5R15",
-    "33X9R15",
-    "33X9R15",
-    "33X9.5R15",
-    "34X10.5R15",
-    "34X12.5R15",
-    "34X9.5R15",
-    "35X10.5R15",
-    "35X12.5R15",
-    "35X13.5R15",
-    "35X14.5R15",
-    "35X15R15",
-    "35X15R15",
-    "35X15.5R15",
-    "35X16R15",
-    "35X16R15",
-    "36X12.5R15",
-    "36X13.5R15",
-    "36X14.5R15",
-    "37X12.5R15",
-    "37X13R15",
-    "37X13R15",
-    "37X13.5R15",
-    "37X14R15",
-    "37X14R15",
-    "37X14.5R15",
-    "38X12.5R15",
-    "38X13R15",
-    "38X13R15",
-    "38X14.5R15",
-    "38X15.5R15",
-    "38.5X11R15",
-    "38.5X11R15",
-    "38.5X15R15",
-    "38.5X15R15",
-    "38.5X16R15",
-    "38.5X16R15",
-    "39X13.5R15",
-    "39.5X15R15",
-    "39.5X15R15",
-    "39.5X18R15",
-    "39.5X18R15",
-    "40X16R15",
-    "40X16R15",
-    "42X14R15",
-    "42X14R15",
-    "42X15R15",
-    "42X15R15",
-    "44X18.5R15",
-    "44X19.5R15",
-    "44X21R15",
-    "44X21R15",
-    "47X17R15",
-    "47X17R15",
-    "22x8.5R16",
-    "26x10R16",
-    "26X11.5R16",
-    "27x8.5R16",
-    "28x10R16",
-    "28X11.5R16",
-    "30X11.5R16",
-    "31X10.5R16",
-    "31X11R16",
-    "31X11R16",
-    "31X11.5R16",
-    "31X12.5R16",
-    "32X10R16",
-    "32X10R16",
-    "32X11.5R16",
-    "32X9R16",
-    "32X9R16",
-    "33X10.5R16",
-    "33X11.5R16",
-    "33X12.5R16",
-    "33X13R16",
-    "33X13R16",
-    "33X13.5R16",
-    "33X14R16",
-    "33X14R16",
-    "33X14.5R16",
-    "33X9.5R16",
-    "34X10.5R16",
-    "34X12.5R16",
-    "34X13.5R16",
-    "34X9R16",
-    "34X9R16",
-    "34.5X17R16",
-    "34.5X17R16",
-    "35X10.5R16",
-    "35X12.5R16",
-    "35X14.5R16",
-    "35X15R16",
-    "35X15R16",
-    "35X16R16",
-    "35X16R16",
-    "36X12.5R16",
-    "36X13R16",
-    "36X13R16",
-    "36X13.5R16",
-    "36X14.5R16",
-    "37X12.5R16",
-    "37X13R16",
-    "37X13R16",
-    "37X13.5R16",
-    "37X14R16",
-    "37X14R16",
-    "37X14.5R16",
-    "38X13R16",
-    "38X13R16",
-    "38X14.5R16",
-    "38X15.5R16",
-    "38.5X11R16",
-    "38.5X11R16",
-    "38.5X15R16",
-    "38.5X15R16",
-    "39X13.5R16",
-    "39.5X15R16",
-    "39.5X15R16",
-    "40X16R16",
-    "40X16R16",
-    "41X14.5R16",
-    "42X14R16",
-    "42X14R16",
-    "42X15R16",
-    "42X15R16",
-    "44X19.5R16",
-    "44X21R16",
-    "44X21R16",
-    "46X19.5R16",
-    "33X11.5R16",
-    "33X12.5R16",
-    "33X14R16",
-    "33X14R16",
-    "33X14.5R16",
-    "33X15.5R16",
-    "35X12.5R16",
-    "35X14.5R16",
-    "35X15R16",
-    "35X15R16",
-    "35X15.5R16",
-    "35X16R16",
-    "35X16R16",
-    "35X9.5R16",
-    "36X12.5R16",
-    "36X13.5R16",
-    "36X14.5R16",
-    "36X16R16",
-    "36X16R16",
-    "37X12.5R16",
-    "37X13R16",
-    "37X13R16",
-    "37X14R16",
-    "37X14R16",
-    "38X11R16",
-    "38X11R16",
-    "38X12.5R16",
-    "38X15.5R16",
-    "38.5X11R16",
-    "38.5X11R16",
-    "38.5X15R16",
-    "38.5X15R16",
-    "38.5X16R16",
-    "38.5X16R16",
-    "39X13.5R16",
-    "39.5X15R16",
-    "39.5X15R16",
-    "39.5X18R16",
-    "39.5X18R16",
-    "42X14R16",
-    "42X14R16",
-    "42X15R16",
-    "42X15R16",
-    "43X14.5R16",
-    "44X18.5R16",
-    "44X18.5R16",
-    "44X19.5R16",
-    "44X21R16",
-    "44X21R16",
-    "47X17R16",
-    "47X17R16",
-    "48X12.5R16",
-    "49X21R16",
-    "49X21R16",
-    "23x8.5R17",
-    "25x10R17",
-    "26x10R17",
-    "26X11.5R17",
-    "27x10R17",
-    "28x8.5R17",
-    "28x10R17",
-    "29x10R17",
-    "31X10.5R17",
-    "32X10.5R17",
-    "32X11.5R17",
-    "33X10.5R17",
-    "33X12.5R17",
-    "33X13R17",
-    "33X13R17",
-    "33X13.5R17",
-    "34X10.5R17",
-    "35X10.5R17",
-    "35X12.5R17",
-    "35X14.5R17",
-    "36X12.5R17",
-    "36X13.5R17",
-    "37X12.5R17",
-    "37X13R17",
-    "37X13R17",
-    "37X13.5R17",
-    "37X14R17",
-    "37X14R17",
-    "38X13.5R17",
-    "38X14.5R17",
-    "38X15.5R17",
-    "39X13.5R17",
-    "39.5X15R17",
-    "39.5X15R17",
-    "40X13.5R17",
-    "40X14.5R17",
-    "40X16R17",
-    "40X16R17",
-    "41X14.5R17",
-    "42X14R17",
-    "42X14R17",
-    "42X14.5R17",
-    "42X15R17",
-    "42X15R17",
-    "43X14.5R17",
-    "44X19.5R17",
-    "44X21R17",
-    "44X21R17",
-    "47X17R17",
-    "47X17R17",
-    "49X21R17",
-    "49X21R17",
-    "25x10R18",
-    "26x10R18",
-    "26X12R18",
-    "26X12R18",
-    "27x10R18",
-    "28x10R18",
-    "29x10R18",
-    "30x10R18",
-    "33X11.5R18",
-    "33X12.5R18",
-    "33X13R18",
-    "33X13R18",
-    "33X13.5R18",
-    "34X12.5R18",
-    "35X12.5R18",
-    "35X13R18",
-    "35X13R18",
-    "35X13.5R18",
-    "35X14.5R18",
-    "36X13.5R18",
-    "37X12.5R18",
-    "37X13.5R18",
-    "38X13.5R18",
-    "38X14.5R18",
-    "38X15R18",
-    "38X15R18",
-    "38X15.5R18",
-    "40X13.5R18",
-    "40X14.5R18",
-    "41X14.5R18",
-    "25x10R19",
-    "26x10R19",
-    "27x10R19",
-    "28x10R19",
-    "29x10R19",
-    "30x10R19",
-    "31x10R19",
-    "26x10R20",
-    "26x12R20",
-    "27x10R20",
-    "28x10R20",
-    "29x10R20",
-    "30x10R20",
-    "31x10R20",
-    "31X18R20",
-    "31X18R20",
-    "32x12R20",
-    "33X12R20",
-    "33X12R20",
-    "33X12.5R20",
-    "33X13.5R20",
-    "34X14R20",
-    "35X11.5R20",
-    "35X12.5R20",
-    "35X13R20",
-    "35X13R20",
-    "35X13.5R20",
-    "35X14.5R20",
-    "36X13.5R20",
-    "36X15.5R20",
-    "37X11.5R20",
-    "37X12.5R20",
-    "37X13.5R20",
-    "38X13.5R20",
-    "38X14.5R20",
-    "38X15.5R20",
-    "39X13.5R20",
-    "39.5X15R20",
-    "39.5X15R20",
-    "40X13.5R20",
-    "40X14.5R20",
-    "40X15.5R20",
-    "41X14.5R20",
-    "42X14.5R20",
-    "42X15R20",
-    "42X15R20",
-    "43X14.5R20",
-    "44X19.5R20",
-    "44X19.5R20",
-    "44X21R20",
-    "44X21R20",
-    "45X14.5R20",
-    "46X19.5R20",
-    "49X21R20",
-    "49X21R20",
-    "27x10R21",
-    "27x12R21",
-    "28X10R21",
-    "28x14R21",
-    "29X10R21",
-    "31x10R21",
-    "28x10R22",
-    "28x12R22",
-    "29x10R22",
-    "33X12.5R22",
-    "34x12R22",
-    "35X12.5R22",
-    "35X14.5R22",
-    "37X12.5R22",
-    "37X13.5R22",
-    "38X13.5R22",
-    "38X15.5R22",
-    "40X14.5R22",
-    "40X15.5R22",
-    "41X14.5R22",
-    "30x10R24",
-    "35X13.5R24",
-    "37X13.5R24",
-    "38X13.5R24",
-    "38X14R24",
-    "38X14R24",
-    "40X14.5R24",
-    "40X15.5R24",
-    "40X15.5R26"
-];
+    "315/30R30"];
+
+var truckTireSizes = [ '21x10R13',
+  '22X8R13',
+  '22X8R13',
+  '22X8R15',
+  '22X8R15',
+  '22x8.5R16',
+  '23x8.5R17',
+  '24.5X8R13',
+  '24.5X8R13',
+  '24.5X8R15',
+  '24.5X8R15',
+  '24.5X9R13',
+  '24.5X9R13',
+  '24X4.5R15',
+  '24X5R15',
+  '24X5R15',
+  '25x10R17',
+  '25x10R18',
+  '25x10R19',
+  '26X10.5R15',
+  '26X10R15',
+  '26X10R15',
+  '26X11.5R15',
+  '26X11.5R16',
+  '26X11.5R17',
+  '26X12R18',
+  '26X12R18',
+  '26X6R15',
+  '26X6R15',
+  '26X7.5R15',
+  '26X8.5R14',
+  '26X8.5R15',
+  '26X8R15',
+  '26X8R15',
+  '26x10R16',
+  '26x10R17',
+  '26x10R18',
+  '26x10R19',
+  '26x10R20',
+  '26x12R20',
+  '26x8.5R15',
+  '27X10.5R15',
+  '27X9.5R15',
+  '27x10R15',
+  '27x10R17',
+  '27x10R18',
+  '27x10R19',
+  '27x10R20',
+  '27x10R21',
+  '27x12R21',
+  '27x8.5R16',
+  '28X10.5R15',
+  '28X10R21',
+  '28X11.5R15',
+  '28X11.5R16',
+  '28X12.5R15',
+  '28X13.5R15',
+  '28X4.5R15',
+  '28X7.5R15',
+  '28X9R15',
+  '28X9R15',
+  '28x10R16',
+  '28x10R17',
+  '28x10R18',
+  '28x10R19',
+  '28x10R20',
+  '28x10R22',
+  '28x12R22',
+  '28x14R21',
+  '28x8.5R17',
+  '29.5X9R15',
+  '29.5X9R15',
+  '29X10.5R15',
+  '29X10R21',
+  '29X11.5R15',
+  '29X12.5R15',
+  '29X15.5R15',
+  '29X18.5R15',
+  '29X18R15',
+  '29X18R15',
+  '29X4.5R15',
+  '29X8.5R15',
+  '29x10R17',
+  '29x10R18',
+  '29x10R19',
+  '29x10R20',
+  '29x10R22',
+  '30X10.5R15',
+  '30X11.5R15',
+  '30X11.5R16',
+  '30X12.5R15',
+  '30X13.5R15',
+  '30X7R15',
+  '30X7R15',
+  '30X9.5R15',
+  '30X9R15',
+  '30X9R15',
+  '30x10R18',
+  '30x10R19',
+  '30x10R20',
+  '30x10R24',
+  '31X10.5R15',
+  '31X10.5R16',
+  '31X10.5R17',
+  '31X11.5R15',
+  '31X11.5R16',
+  '31X11R15',
+  '31X11R15',
+  '31X11R16',
+  '31X11R16',
+  '31X12.5R15',
+  '31X12.5R16',
+  '31X13.5R15',
+  '31X13R15',
+  '31X13R15',
+  '31X14.5R15',
+  '31X16.5R15',
+  '31X18.5R15',
+  '31X18R15',
+  '31X18R15',
+  '31X18R20',
+  '31X18R20',
+  '31X9.5R15',
+  '31x10R19',
+  '31x10R20',
+  '31x10R21',
+  '32X10.5R15',
+  '32X10.5R17',
+  '32X10R16',
+  '32X10R16',
+  '32X11.5R15',
+  '32X11.5R16',
+  '32X11.5R17',
+  '32X14R15',
+  '32X14R15',
+  '32X16R15',
+  '32X16R15',
+  '32X17.5R15',
+  '32X18.5R15',
+  '32X9.5R15',
+  '32X9R16',
+  '32X9R16',
+  '32x12R20',
+  '33X10.5R15',
+  '33X10.5R16',
+  '33X10.5R17',
+  '33X11.5R15',
+  '33X11.5R16',
+  '33X11.5R16',
+  '33X11.5R18',
+  '33X12.5R15',
+  '33X12.5R16',
+  '33X12.5R16',
+  '33X12.5R17',
+  '33X12.5R18',
+  '33X12.5R20',
+  '33X12.5R22',
+  '33X12R20',
+  '33X12R20',
+  '33X13.5R15',
+  '33X13.5R16',
+  '33X13.5R17',
+  '33X13.5R18',
+  '33X13.5R20',
+  '33X13R15',
+  '33X13R15',
+  '33X13R16',
+  '33X13R16',
+  '33X13R17',
+  '33X13R17',
+  '33X13R18',
+  '33X13R18',
+  '33X14.5R15',
+  '33X14.5R16',
+  '33X14.5R16',
+  '33X14R15',
+  '33X14R15',
+  '33X14R16',
+  '33X14R16',
+  '33X14R16',
+  '33X14R16',
+  '33X15.5R15',
+  '33X15.5R16',
+  '33X16.5R15',
+  '33X19.5R15',
+  '33X21.5R15',
+  '33X9.5R15',
+  '33X9.5R16',
+  '33X9R15',
+  '33X9R15',
+  '34.5X17R16',
+  '34.5X17R16',
+  '34X10.5R15',
+  '34X10.5R16',
+  '34X10.5R17',
+  '34X12.5R15',
+  '34X12.5R16',
+  '34X12.5R18',
+  '34X13.5R16',
+  '34X14R20',
+  '34X9.5R15',
+  '34X9R16',
+  '34X9R16',
+  '34x12R22',
+  '35X10.5R15',
+  '35X10.5R16',
+  '35X10.5R17',
+  '35X11.5R20',
+  '35X12.5R15',
+  '35X12.5R16',
+  '35X12.5R16',
+  '35X12.5R17',
+  '35X12.5R18',
+  '35X12.5R20',
+  '35X12.5R22',
+  '35X13.5R15',
+  '35X13.5R18',
+  '35X13.5R20',
+  '35X13.5R24',
+  '35X13R18',
+  '35X13R18',
+  '35X13R20',
+  '35X13R20',
+  '35X14.5R15',
+  '35X14.5R16',
+  '35X14.5R16',
+  '35X14.5R17',
+  '35X14.5R18',
+  '35X14.5R20',
+  '35X14.5R22',
+  '35X15.5R15',
+  '35X15.5R16',
+  '35X15R15',
+  '35X15R15',
+  '35X15R16',
+  '35X15R16',
+  '35X15R16',
+  '35X15R16',
+  '35X16R15',
+  '35X16R15',
+  '35X16R16',
+  '35X16R16',
+  '35X16R16',
+  '35X16R16',
+  '35X9.5R16',
+  '36X12.5R15',
+  '36X12.5R16',
+  '36X12.5R16',
+  '36X12.5R17',
+  '36X13.5R15',
+  '36X13.5R16',
+  '36X13.5R16',
+  '36X13.5R17',
+  '36X13.5R18',
+  '36X13.5R20',
+  '36X13R16',
+  '36X13R16',
+  '36X14.5R15',
+  '36X14.5R16',
+  '36X14.5R16',
+  '36X15.5R20',
+  '36X16R16',
+  '36X16R16',
+  '37X11.5R20',
+  '37X12.5R15',
+  '37X12.5R16',
+  '37X12.5R16',
+  '37X12.5R17',
+  '37X12.5R18',
+  '37X12.5R20',
+  '37X12.5R22',
+  '37X13.5R15',
+  '37X13.5R16',
+  '37X13.5R17',
+  '37X13.5R18',
+  '37X13.5R20',
+  '37X13.5R22',
+  '37X13.5R24',
+  '37X13R15',
+  '37X13R15',
+  '37X13R16',
+  '37X13R16',
+  '37X13R16',
+  '37X13R16',
+  '37X13R17',
+  '37X13R17',
+  '37X14.5R15',
+  '37X14.5R16',
+  '37X14R15',
+  '37X14R15',
+  '37X14R16',
+  '37X14R16',
+  '37X14R16',
+  '37X14R16',
+  '37X14R17',
+  '37X14R17',
+  '38.5X11R15',
+  '38.5X11R15',
+  '38.5X11R16',
+  '38.5X11R16',
+  '38.5X11R16',
+  '38.5X11R16',
+  '38.5X15R15',
+  '38.5X15R15',
+  '38.5X15R16',
+  '38.5X15R16',
+  '38.5X15R16',
+  '38.5X15R16',
+  '38.5X16R15',
+  '38.5X16R15',
+  '38.5X16R16',
+  '38.5X16R16',
+  '38X11R16',
+  '38X11R16',
+  '38X12.5R15',
+  '38X12.5R16',
+  '38X13.5R17',
+  '38X13.5R18',
+  '38X13.5R20',
+  '38X13.5R22',
+  '38X13.5R24',
+  '38X13R15',
+  '38X13R15',
+  '38X13R16',
+  '38X13R16',
+  '38X14.5R15',
+  '38X14.5R16',
+  '38X14.5R17',
+  '38X14.5R18',
+  '38X14.5R20',
+  '38X14R24',
+  '38X14R24',
+  '38X15.5R15',
+  '38X15.5R16',
+  '38X15.5R16',
+  '38X15.5R17',
+  '38X15.5R18',
+  '38X15.5R20',
+  '38X15.5R22',
+  '38X15R18',
+  '38X15R18',
+  '39.5X15R15',
+  '39.5X15R15',
+  '39.5X15R16',
+  '39.5X15R16',
+  '39.5X15R16',
+  '39.5X15R16',
+  '39.5X15R17',
+  '39.5X15R17',
+  '39.5X15R20',
+  '39.5X15R20',
+  '39.5X18R15',
+  '39.5X18R15',
+  '39.5X18R16',
+  '39.5X18R16',
+  '39X13.5R15',
+  '39X13.5R16',
+  '39X13.5R16',
+  '39X13.5R17',
+  '39X13.5R20',
+  '40X13.5R17',
+  '40X13.5R18',
+  '40X13.5R20',
+  '40X14.5R17',
+  '40X14.5R18',
+  '40X14.5R20',
+  '40X14.5R22',
+  '40X14.5R24',
+  '40X15.5R20',
+  '40X15.5R22',
+  '40X15.5R24',
+  '40X15.5R26',
+  '40X16R15',
+  '40X16R15',
+  '40X16R16',
+  '40X16R16',
+  '40X16R17',
+  '40X16R17',
+  '41X14.5R16',
+  '41X14.5R17',
+  '41X14.5R18',
+  '41X14.5R20',
+  '41X14.5R22',
+  '42X14.5R17',
+  '42X14.5R20',
+  '42X14R15',
+  '42X14R15',
+  '42X14R16',
+  '42X14R16',
+  '42X14R16',
+  '42X14R16',
+  '42X14R17',
+  '42X14R17',
+  '42X15R15',
+  '42X15R15',
+  '42X15R16',
+  '42X15R16',
+  '42X15R16',
+  '42X15R16',
+  '42X15R17',
+  '42X15R17',
+  '42X15R20',
+  '42X15R20',
+  '43X14.5R16',
+  '43X14.5R17',
+  '43X14.5R20',
+  '44X18.5R15',
+  '44X18.5R16',
+  '44X18.5R16',
+  '44X19.5R15',
+  '44X19.5R16',
+  '44X19.5R16',
+  '44X19.5R17',
+  '44X19.5R20',
+  '44X19.5R20',
+  '44X21R15',
+  '44X21R15',
+  '44X21R16',
+  '44X21R16',
+  '44X21R16',
+  '44X21R16',
+  '44X21R17',
+  '44X21R17',
+  '44X21R20',
+  '44X21R20',
+  '45X14.5R20',
+  '46X19.5R16',
+  '46X19.5R20',
+  '47X17R15',
+  '47X17R15',
+  '47X17R16',
+  '47X17R16',
+  '47X17R17',
+  '47X17R17',
+  '48X12.5R16',
+  '49X21R16',
+  '49X21R16',
+  '49X21R17',
+  '49X21R17',
+  '49X21R20',
+  '49X21R20' ];
+
+// function splitTire (tires){
+//     var width = [];
+//     var height = [];
+//     var rim = [];
+//     tires.forEach(function(tire){
+//         if(!contains(width,tire.substring(0,3))){
+//             width.push(tire.substring(0,3));
+//         }
+//         if(!contains(height,tire.substring(4,6))){
+//             height.push(tire.substring(4,6));
+//         }
+//         if(!contains(rim,tire.substring(7,9))){
+//             rim.push(tire.substring(7,9));
+//         }
+//     });
+//     console.log(width.sort(),height.sort(),rim.sort());
+// }
+//
+// function contains(a, obj) {
+//     for (var i = 0; i < a.length; i++) {
+//         if (a[i] === obj) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// splitTire(carTires);
