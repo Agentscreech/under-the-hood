@@ -1,4 +1,4 @@
-// var db = require('./models');
+var db = require('../models');
 
 var fuel = ["regular", "plus", "premium", "diesel"];
 var oil = ["0W-30", "0W-40", "5W-40", "5W-30", "10W-30", "10W-40", "15W-40", "20W-50"];
@@ -2961,8 +2961,6 @@ var cars = {
     }
 };
 
-//size reg expression = (\d{3}/\d{2}R\d{2})
-// ([234]\dX\dR\d\d)|([234]\dX\d\dR\d\d)|([234]\d\.5X\dR\d\d)|([234]\d\.5X\d\dR\d\d)|([234]\d\.5X\d\d\.5R\d\d)|([234]\d\.5X\d\.5R\d\d)|([234]\dX\d\.5R\d\d)|([234]\dX\d\d\.5R\d\d)
 var carTireSizes = ["105","115","125","135","145","155","165","175","185","195","205","215","225","235","245","255","265","275","285","295","305","315","325","335","345","355","365","375","385","395","405"],[ "25","30","35","40","45","50","55","60","65","70","75","80","85","90"],[ "13","14","15","16","17","18","19","20","21","22","23","24","26","28","30"];  //jshint ignore:line
 
 var validCarTires = ["215/50R13",
@@ -4033,31 +4031,3 @@ var truckTireSizes = [ '21x10R13',
   '49X21R17',
   '49X21R20',
   '49X21R20' ];
-
-// function splitTire (tires){
-//     var width = [];
-//     var height = [];
-//     var rim = [];
-//     tires.forEach(function(tire){
-//         if(!contains(width,tire.substring(0,3))){
-//             width.push(tire.substring(0,3));
-//         }
-//         if(!contains(height,tire.substring(4,6))){
-//             height.push(tire.substring(4,6));
-//         }
-//         if(!contains(rim,tire.substring(7,9))){
-//             rim.push(tire.substring(7,9));
-//         }
-//     });
-//     console.log(width.sort(),height.sort(),rim.sort());
-// }
-//
-// function contains(a, obj) {
-//     for (var i = 0; i < a.length; i++) {
-//         if (a[i] === obj) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
-// splitTire(carTires);
