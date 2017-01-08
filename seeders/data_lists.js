@@ -6750,10 +6750,6 @@ var cars = {
     }
 };
 
-
-
-
-
 //size reg expression = (\d{3}/\d{2}R\d{2})
 // ([234]\dX\dR\d\d)|([234]\dX\d\dR\d\d)|([234]\d\.5X\dR\d\d)|([234]\d\.5X\d\dR\d\d)|([234]\d\.5X\d\d\.5R\d\d)|([234]\d\.5X\d\.5R\d\d)|([234]\dX\d\.5R\d\d)|([234]\dX\d\d\.5R\d\d)
 var tireSizes = ["215/50R13",
