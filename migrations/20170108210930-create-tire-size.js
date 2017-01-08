@@ -8,8 +8,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      width: {
         type: Sequelize.STRING
+      },
+      height: {
+        type: Sequelize.STRING
+      },
+      rim: {
+        type: Sequelize.STRING
+      },
+      truck: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
