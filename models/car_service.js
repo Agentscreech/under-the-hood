@@ -9,7 +9,8 @@ module.exports = function(sequelize, DataTypes) {
     oilId: DataTypes.INTEGER,
     wiperId: DataTypes.INTEGER,
     tireSizeId: DataTypes.INTEGER,
-    tireBrandId: DataTypes.INTEGER
+    tireBrandId: DataTypes.INTEGER,
+    otherId: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {

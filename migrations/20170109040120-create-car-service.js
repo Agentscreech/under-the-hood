@@ -35,6 +35,9 @@ module.exports = {
       tireBrandId: {
         type: Sequelize.INTEGER
       },
+      otherId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

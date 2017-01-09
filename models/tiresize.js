@@ -8,7 +8,8 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-      }
+        models.tireSize.belongsTo(models.car_service);
+    }
     }
   });
   return tireSize;
