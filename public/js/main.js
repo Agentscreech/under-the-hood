@@ -5,7 +5,7 @@ $('document').ready(function(){
         console.log(form);
         var fields = form[0].children[1];
         console.log(fields);
-        $('.serviceSelection .serviceForm').show();
+        $(fields).show();
         $('.addLog').hide();
     });
     $('.cancel').click(function(){

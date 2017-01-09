@@ -3,8 +3,8 @@
 <a href="/">Home</a>
 
 <h3>Your Cars</h3>
-<div class="well">
     <%user.cars.forEach(function(car){%>
+        <div class="well">
         <%var detail = JSON.parse(car.styleDetails);%>
         <h4><%=car.year%> <%=car.make%> <%=car.model%> <%=car.style%></h4>
         <p><strong>Details:</strong></p>
@@ -14,7 +14,7 @@
         <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway</p>
 
         <div class=serviceSelection>
-            <button class="btn btn-primary pull-right addLog" >Log a maintainence</button>
+            <button class="btn btn-primary addLog" >Log a maintainence</button>
             <form class="form-group serviceForm" action="/log/<%=car.id%>/new" method="post">
                 <p>Service Type:</p>
                 <select class="form-select serviceName" name="serviceName">
@@ -42,8 +42,8 @@
         </div>
 
 
+        </div>
     <%})%>
-</div>
 <div class="edmundsLogo">
     <a href="http://www.edmunds.com/?id=apis"><img src='img/100-square-white.png'></a>
 </div>
