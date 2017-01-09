@@ -23,9 +23,6 @@ module.exports = {
       tiresizeId: {
         type: Sequelize.INTEGER
       },
-      tireretailerId: {
-        type: Sequelize.INTEGER
-      },
       tirebrandId: {
         type: Sequelize.INTEGER
       },

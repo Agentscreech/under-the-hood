@@ -6,7 +6,6 @@ module.exports = function(sequelize, DataTypes) {
     oilId: DataTypes.INTEGER,
     wiperId: DataTypes.INTEGER,
     tiresizeId: DataTypes.INTEGER,
-    tireretailerId: DataTypes.INTEGER,
     tirebrandId: DataTypes.INTEGER
   }, {
     classMethods: {
