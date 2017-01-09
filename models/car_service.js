@@ -15,6 +15,12 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        models.car_service.belongsTo(models.fuel);
+        models.car_service.belongsTo(models.oil);
+        models.car_service.belongsTo(models.wiper);
+        models.car_service.belongsTo(models.tireSize);
+        models.car_service.belongsTo(models.tireBrand);
+        models.car_service.belongsTo(models.other);
       }
     }
   });

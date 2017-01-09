@@ -1,4 +1,5 @@
 require('dotenv').config();
+var db = require('./models');
 var express = require('express');
 var ejsLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
@@ -22,7 +23,6 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(flash());
 
 app.use(function(req, res, next) {
@@ -36,7 +36,16 @@ app.get('/', function(req, res) {
 });
 
 app.get('/profile', isLoggedIn, function(req, res) {
-  res.render('profile');
+    db.user.find({
+      where: {
+        id: req.user.id
+      },
+      include: [db.car]
+    }).then(function(user){
+      console.log(user.cars[0].year);
+      res.render('profile',{user:user});
+    });
+
 });
 
 app.use('/auth', require('./controllers/auth'));
