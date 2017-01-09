@@ -12,5 +12,36 @@
         <p>with a <%=detail.transmission.numberOfSpeeds%> speed <%=detail.transmission.transmissionType.toLowerCase()%>, <%=detail.drivenWheels%></p>
         <p>making <%=detail.engine.horsepower%> hp at <%=detail.engine.rpm.horsepower%> RPM and <%=detail.engine.torque%> ft/lbs of torque at <%=detail.engine.rpm.torque%> RPM</p>
         <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway</p>
+    <button class="btn btn-primary pull-right addlog">Log a maintainence</button>
+    <form id=<%=car.make%> class="form-group" action="" method="post">
+        <p>Service Type:</p>
+        <select class="form-select serviceName" name="serviceName">
+            <option>Select a service</option>
+            <option value="fuel">Fuel Fill</option>
+            <option value="oil">Oil Change</option>
+            <option value="wipers">Replaced Wiper Blades</option>
+            <option value="airFilter">Replaced Air Filter</option>
+            <option value="tire">New Tires</option>
+            <option value="battery">Replaced Battery</option>
+            <option value="brakes">Brake Service</option>
+            <option value="sparkPlugs">Replaced Spark Plugs</option>
+            <option value="inCabinAirFilter">Replaced In Cabin Air Filter</option>
+            <option value="other">Other</option>
+        </select>
+        <div class="option">
+
+        </div>
+        <p>Cost:</p>
+        <input class="form-control" type="text" name="cost" placeholder="19.99"></input>
+        <p>Mileage:</p>
+        <input class="form-control" type="text" name="mileage" placeholder="804450"></input>
+
+    </form>
+
+
     <%})%>
+</div>
+
+<div class="edmundsLogo">
+    <a href="http://www.edmunds.com/?id=apis"><img src='img/100-square-white.png'></a>
 </div>

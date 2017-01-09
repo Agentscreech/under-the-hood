@@ -7,6 +7,7 @@ var session = require('express-session');
 var passport = require('./config/ppConfig');
 var flash = require('connect-flash');
 var isLoggedIn = require('./middleware/isLoggedIn');
+
 var app = express();
 
 app.set('view engine', 'ejs');
@@ -14,6 +15,7 @@ app.set('view engine', 'ejs');
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
+app.use(express.static(__dirname + '/public/'));
 
 app.use(session({
   secret: process.env.SESSION_SECRET || 'supersecretpassword',
@@ -42,14 +44,13 @@ app.get('/profile', isLoggedIn, function(req, res) {
       },
       include: [db.car]
     }).then(function(user){
-      console.log(user.cars[0].year);
       res.render('profile',{user:user});
     });
 
 });
 
 app.use('/auth', require('./controllers/auth'));
-
+app.use('/profile', require('./controllers/profile'))
 var server = app.listen(process.env.PORT || 3000);
 
 module.exports = server;
