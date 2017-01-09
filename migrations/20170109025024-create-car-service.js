@@ -20,8 +20,20 @@ module.exports = {
       mileage: {
         type: Sequelize.INTEGER
       },
-      notes: {
-        type: Sequelize.TEXT
+      fuelId: {
+        type: Sequelize.INTEGER
+      },
+      oilId: {
+        type: Sequelize.INTEGER
+      },
+      wiperId: {
+        type: Sequelize.INTEGER
+      },
+      tireSizeId: {
+        type: Sequelize.INTEGER
+      },
+      tireBrandId: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

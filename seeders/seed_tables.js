@@ -1,6 +1,54 @@
 var db = require('../models');
 
+//populate services
+var services = [
+    {
+        name:"fuel",
+    },
+    {
+        name:"oil",
+    },
+    {
+        name:"wiper",
+    },
+    {
+        name:"tire",
+    },
+    {
+        name:"air filter"
+    },
+    {
+        name:"battery"
+    },
+    {
+        name:"in cabin air filter"
+    },
+    {
+        name:"spark plugs"
+    },
+    {
+        name:"brakes"
+    },
+    {
+        name:"other"
+    },
+
+];
+
+function buildServices(item){
+    item.forEach(function(service){
+        db.service.findOrCreate({
+            where:{
+                name:service.name
+            }
+        });
+    });
+
+}
+buildServices(services);
+
 //populate users
+
 var users = [
     {
         email: "showmewhatyougot@getschwifty.com",
@@ -3671,3 +3719,160 @@ function buildTireSizes(item){
     });
 }
 buildTireSizes(carTires);
+
+
+var mockServices = [
+    {
+        carId:1,
+        serviceId:2,
+        cost:58,
+        mileage:80000,
+        fuelId:3
+    },
+    {
+        carId:2,
+        serviceId:2,
+        cost:32,
+        mileage:34000,
+        fuelId:1
+    },
+    {
+        carId:3,
+        serviceId:2,
+        cost:48,
+        mileage:203000,
+        fuelId:2
+    },
+    {
+        carId:1,
+        serviceId:1,
+        cost:98,
+        mileage:80200,
+        oilId:4
+    },
+    {
+        carId:2,
+        serviceId:1,
+        cost:78,
+        mileage:34200,
+        oilId:2
+    },
+    {
+        carId:3,
+        serviceId:1,
+        cost:40,
+        mileage:203200,
+        oilId:7
+    },
+    {
+        carId:1,
+        serviceId:5,
+        cost:2000,
+        mileage:80300,
+        tireSizeId:397,
+        tireBrandId:3
+    },
+    {
+        carId:2,
+        serviceId:5,
+        cost:1500,
+        mileage:34300,
+        tireSizeId:298,
+        tireBrandId:4
+    },
+    {
+        carId:3,
+        serviceId:5,
+        cost:800,
+        mileage:203300,
+        tireSizeId:216,
+        tireBrandId:3
+    },
+    {
+        carId:1,
+        serviceId:3,
+        cost:30,
+        mileage:80400,
+        wiperId:9
+    },
+    {
+        carId:2,
+        serviceId:3,
+        cost:20,
+        mileage:34400,
+        wiperId:17
+    },
+    {
+        carId:3,
+        serviceId:3,
+        cost:10,
+        mileage:203400,
+        wiperId:11
+    },
+    {
+        carId:1,
+        serviceId:4,
+        cost:20,
+        mileage:80500
+    },
+    {
+        carId:2,
+        serviceId:4,
+        cost:15,
+        mileage:34500
+    },
+    {
+        carId:3,
+        serviceId:4,
+        cost:8,
+        mileage:203500
+    },
+    {
+        carId:1,
+        serviceId:8,
+        cost:159,
+        mileage:80600
+    },
+    {
+        carId:2,
+        serviceId:8,
+        cost:100,
+        mileage:34600
+    },
+    {
+        carId:3,
+        serviceId:8,
+        cost:79,
+        mileage:203600
+    }
+];
+
+function buildMockServices(item){
+    item.forEach(function(service){
+        if(service.fuelId === undefined){
+            service.fuelId = null;
+        } else if (service.oilId === undefined){
+            service.oilId = null;
+        } else if (service.wiperId === undefined){
+            service.wiperId = null;
+        } else if (service.tireBrandId === undefined){
+            service.tireBrandId = null;
+        } else if (service.tireSizeId === undefined){
+                service.tireSizeId = null;
+        }
+        db.car_service.findOrCreate({
+            where:{
+                carId:service.carId,
+                serviceId:service.serviceId,
+                cost:service.cost,
+                mileage:service.mileage,
+                fuelId:service.fuelId,
+                oilId:service.oilId,
+                wiperId:service.wiperId,
+                tireSizeId:service.tireSizeId,
+                tireBrandId:service.tireBrandId
+            }
+        });
+    });
+}
+buildMockServices(mockServices);

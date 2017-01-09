@@ -11,21 +11,6 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      fuelId: {
-        type: Sequelize.INTEGER
-      },
-      oilId: {
-        type: Sequelize.INTEGER
-      },
-      wiperId: {
-        type: Sequelize.INTEGER
-      },
-      tiresizeId: {
-        type: Sequelize.INTEGER
-      },
-      tirebrandId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
