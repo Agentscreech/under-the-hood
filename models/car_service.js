@@ -5,20 +5,12 @@ module.exports = function(sequelize, DataTypes) {
     serviceId: DataTypes.INTEGER,
     cost: DataTypes.INTEGER,
     mileage: DataTypes.INTEGER,
-    fuelId: DataTypes.INTEGER,
-    oilId: DataTypes.INTEGER,
-    wiperId: DataTypes.INTEGER,
-    tireSizeId: DataTypes.INTEGER,
-    tireBrandId: DataTypes.INTEGER,
+    option: DataTypes.STRING,
+    notes: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-        models.car_service.belongsTo(models.fuel);
-        models.car_service.belongsTo(models.oil);
-        models.car_service.belongsTo(models.wiper);
-        models.car_service.belongsTo(models.tireSize);
-        models.car_service.belongsTo(models.tireBrand);
         models.car_service.belongsTo(models.other);
       }
     }

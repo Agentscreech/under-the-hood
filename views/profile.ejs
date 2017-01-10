@@ -13,7 +13,7 @@
         <p>with a <%=detail.transmission.numberOfSpeeds%> speed <%=detail.transmission.transmissionType.toLowerCase()%>, <%=detail.drivenWheels%></p>
         <p>making <%=detail.engine.horsepower%> hp at <%=detail.engine.rpm.horsepower%> RPM and <%=detail.engine.torque%> ft/lbs of torque at <%=detail.engine.rpm.torque%> RPM</p>
         <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway </p>
-        <p>Fuel grader: <%=detail.engine.fuelType%></p>
+        <p>Fuel grade: <%=detail.engine.fuelType%></p>
 
         <div class=serviceSelection>
             <button class="btn btn-primary addLog" >Log a maintainence</button>
@@ -28,6 +28,7 @@
 <div class="edmundsLogo">
     <a href="http://www.edmunds.com/?id=apis"><img src='img/100-square-white.png'></a>
 </div>
+
 <!--<input type="text" name="other" >
 <p>Service Type:</p>
 <select class="form-select serviceName" name="services">

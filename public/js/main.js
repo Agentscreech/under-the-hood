@@ -6,12 +6,14 @@ $('document').ready(function() {
         // console.log(type);
         $(type).empty();
         $(type).append('<p>Service Type:</p>');
-        $(type).append('<select class="form-select serviceName" name="services"><option>Select Type</option></select>');
+        $(type).append('<select class="form-select serviceName" name="serviceId"><option>Select Type</option></select>');
         $(type).append('<div class="option"></div>');
         $(type).append('<p>Cost:</p>');
         $(type).append('<input class="form-control" type="text" name="cost" placeholder="19.99"></input>');
         $(type).append('<p>Mileage:</p>');
         $(type).append('<input class="form-control" type="text" name="mileage" placeholder="804450"></input>');
+        $(type).append('<p>Notes:</p>');
+        $(type).append('<input class="form-control" type="text" name="notes" placeholder="place was closed Sundays"></input>');
         $(type).append('<button type="submit" class="btn btn-primary">Add</button>');
         $(type).append('<button type="button" class="btn btn-warning cancel">Cancel</button>');
 
@@ -39,26 +41,26 @@ $('.serviceForm').on('change', '.serviceName', function() {
     $(option).empty();
     if (type == "fuel") {
         $.get('profile/form-data/' + type).done(function(fuel) {
-            $(option).prepend('<select class="form-select submenu" name="fuelId"></select>');
+            $(option).prepend('<select class="form-select submenu" name="option"></select>');
             $(option).prepend("<p>Fuel Type:</p>");
             fuel.forEach(function(item) {
-                $('.submenu').append("<option value=" + item.id + ">" + item.grade + "</option>");
+                $('.submenu').append("<option value=" + item.grade + ">" + item.grade + "</option>");
             });
         });
     } else if (type == "oil") {
         $.get('profile/form-data/' + type).done(function(oil) {
-            $(option).prepend('<select class="form-select submenu" name="oilId"></select>');
+            $(option).prepend('<select class="form-select submenu" name="option"></select>');
             $(option).prepend("<p>Oil Type:</p>");
             oil.forEach(function(item) {
-                $('.submenu').append("<option value=" + item.id + ">" + item.weight + "</option>");
+                $('.submenu').append("<option value=" + item.weight + ">" + item.weight + "</option>");
             });
         });
     } else if (type == "wiper") {
         $.get('profile/form-data/' + type).done(function(wiper) {
-            $(option).prepend('<select class="form-select submenu" name="wiperId"></select>');
+            $(option).prepend('<select class="form-select submenu" name="option"></select>');
             $(option).prepend("<p>Wiper Length Type:</p>");
             wiper.forEach(function(item) {
-                $('.submenu').append("<option value=" + item.id + ">" + item.length + "</option>");
+                $('.submenu').append("<option value=" + item.length + ">" + item.length + "</option>");
             });
         });
     } else if (type == "other") {
@@ -72,3 +74,14 @@ $('.serviceForm').on('change', '.serviceName', function() {
 //     $(option).append("<option value="+item.id+">"+item.name+"</option>");
 // });
 // }
+// else if (type == "tire"){
+//     $.get('profile/form-data/' + type).done(function(tires){
+//         $(option).prepend('<select class="form-select submenu" name="rim"></select>');
+//         $(option).prepend('<select class="form-select submenu" name="height"></select>');
+//         $(option).prepend('<select class="form-select submenu" name="width"></select>');
+//         $(option).prepend('<p>Tire Size</p>');
+//         tires.forEach(function(tire){
+//             $('.submenu[name="width"]').append("<option value="+item.id);
+//         });
+//
+//     });

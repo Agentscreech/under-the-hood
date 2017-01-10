@@ -51,6 +51,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/profile', require('./controllers/profile'))
+app.use('/log', require('./controllers/log'));
 var server = app.listen(process.env.PORT || 3000);
 
 module.exports = server;

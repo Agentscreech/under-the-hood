@@ -22,11 +22,12 @@ router.get('/', isLoggedIn, function(req, res) {
 //         res.send(results);
 //     });
 // });
+
+//router that gets data to populate the forms
 router.get('/form-data/:service', isLoggedIn, function(req, res){
     var toGet = req.params.service;
     if(toGet == 'services'){
         db.service.findAll().then(function(results){
-            console.log(results);
             res.send(results);
         });
     } else if (toGet == 'fuel'){
@@ -41,14 +42,15 @@ router.get('/form-data/:service', isLoggedIn, function(req, res){
         db.wiper.findAll().then(function(result){
             res.send(result);
         });
-    }  else if (toGet == 'tire'){
-        db.tireSize.findAll({attributes: 'width'}).then(function(result){
-            res.send(result);
-        });
-    } else if (toGet == 'serviceInterval'){
-
+    
     }
 
 });
 
 module.exports = router;
+
+
+// else if (toGet == 'tire'){
+//     db.tireSize.findAll({attributes: 'width'}).then(function(result){
+//         res.send(result);
+//     });
