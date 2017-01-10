@@ -6,24 +6,18 @@
     <%user.cars.forEach(function(car){%>
         <div class="well">
         <%var detail = JSON.parse(car.styleDetails);%>
+        <%var service = JSON.parse(car.serviceDetails);%>
         <h4><%=car.year%> <%=car.make%> <%=car.model%> <%=car.style%></h4>
         <p><strong>Details:</strong></p>
         <p><%=detail.engine.size%>L <%=detail.engine.configuration%><%=detail.engine.cylinder%> <%if(detail.engine.valve){%><%=detail.engine.totalValves%> <%=detail.engine.valve.timing%> <%=detail.engine.valve.gear%><%}%></p>
         <p>with a <%=detail.transmission.numberOfSpeeds%> speed <%=detail.transmission.transmissionType.toLowerCase()%>, <%=detail.drivenWheels%></p>
         <p>making <%=detail.engine.horsepower%> hp at <%=detail.engine.rpm.horsepower%> RPM and <%=detail.engine.torque%> ft/lbs of torque at <%=detail.engine.rpm.torque%> RPM</p>
-        <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway</p>
+        <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway </p>
+        <p>Fuel grader: <%=detail.engine.fuelType%></p>
 
         <div class=serviceSelection>
             <button class="btn btn-primary addLog" >Log a maintainence</button>
             <form class="form-group serviceForm" action="/log/<%=car.id%>/new" method="post">
-
-                <div class="option"></div>
-                <p>Cost:</p>
-                <input class="form-control" type="text" name="cost" placeholder="19.99"></input>
-                <p>Mileage:</p>
-                <input class="form-control" type="text" name="mileage" placeholder="804450"></input>
-                <button type="submit" class="btn btn-primary">Add</button>
-                <button type="button" class="btn btn-warning cancel">Cancel</button>
 
             </form>
         </div>

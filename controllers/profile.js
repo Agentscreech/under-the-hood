@@ -45,6 +45,8 @@ router.get('/form-data/:service', isLoggedIn, function(req, res){
         db.tireSize.findAll({attributes: 'width'}).then(function(result){
             res.send(result);
         });
+    } else if (toGet == 'serviceInterval'){
+
     }
 
 });
