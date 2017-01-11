@@ -2,7 +2,7 @@ $('document').ready(function() {
     $('.addLog').click(function() {
         var form = ($(this).parent());
         // console.log(form);
-        var type = form[0].children[1];
+        var type = form[0].children[2];
         // console.log(type);
         $(type).empty();
         $(type).append('<p>Service Type:</p>');
@@ -14,7 +14,7 @@ $('document').ready(function() {
         $(type).append('<input class="form-control" type="text" name="mileage" placeholder="804450"></input>');
         $(type).append('<p>Notes:</p>');
         $(type).append('<input class="form-control" type="text" name="notes" placeholder="place was closed Sundays"></input>');
-        $(type).append('<button type="submit" class="btn btn-primary">Add</button>');
+        $(type).append('<button type="submit" class="btn btn-success">Add</button>');
         $(type).append('<button type="button" class="btn btn-warning cancel">Cancel</button>');
 
         $.get('profile/form-data/services').done(function(services) {
@@ -22,13 +22,15 @@ $('document').ready(function() {
                 $('.serviceName').append("<option value =" + service.id + ">" + service.name + "</option>");
             });
         });
-        var fields = form[0].children[1];
+        var fields = form[0].children[2];
         $(fields).show();
         $('.addLog').hide();
+        $('.showLog').hide();
     });
     $('.serviceForm').on('click', '.cancel', function() {
         $('.serviceForm').hide();
         $('.addLog').show();
+        $('.showLog').show();
     });
 
 });

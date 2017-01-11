@@ -1,0 +1,55 @@
+<h2 class="text-center">Log for your <%=services[0].car.make%></h2>
+
+
+    <!-- service.car_service.cost, .mileage, .option, .notes -->
+
+    <%=user.name%>
+
+    <h4>Number of services: <%=services.length%></h4>
+    <p></p>
+<div class="well">
+    <div class="row">
+        <div class="col-xs-3">
+            <p class="text-center">Service Done:</p>
+        </div>
+        <div class="col-xs-2">
+            <p class="text-center">Cost:</p>
+        </div>
+        <div class="col-xs-2">
+            <p class="text-center">Mileage:</p>
+        </div>
+        <div class="col-xs-2">
+            <p class="text-center">Options</p>
+        </div>
+        <div class="col-xs-2">
+            <p class="text-center">Notes</p>
+        </div>
+
+    </div>
+
+
+
+    <% services.forEach(function(item){%>
+            <div class="row">
+                <div class="col-xs-3">
+                    <p class="text-center"><%=item.service.name%></p>
+                </div>
+                <div class="col-xs-2">
+                    <p class='text-center'>$<%=item.cost%></p>
+                </div>
+                <div class="col-xs-2">
+                    <p class='text-center'><%=item.mileage%></p>
+                </div>
+                <div class="col-xs-2">
+                    <p class='text-center'><%=item.option%></p>
+                </div>
+                <div class="col-xs-2">
+                    <p class ='text-center'><%=item.notes%></p>
+                </div>
+
+            </div>
+    <%});%>
+    </div>
+<a href="/profile" class="btn btn-primary">Back to garage</a>
+
+    <!--<%=user.name%>-->

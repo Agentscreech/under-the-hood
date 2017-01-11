@@ -14,7 +14,8 @@ module.exports = function(sequelize, DataTypes) {
         // associations can be defined here
         models.car.belongsTo(models.user);
         models.car.belongsToMany(models.service, {through: "car_service"});
-        
+        // models.car.hasMany(models.car_service);
+
       }
     }
   });

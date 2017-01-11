@@ -16,7 +16,7 @@
         <p>Fuel grade: <%=detail.engine.fuelType%></p>
 
         <div class=serviceSelection>
-            <button class="btn btn-primary addLog" >Log a maintainence</button>
+            <button class="btn btn-primary addLog" >Log a maintainence</button> <a href="/log/<%=user.id%>/<%=car.id%>" class="btn btn-info showLog">Show manteinence log</a>
             <form class="form-group serviceForm" action="/log/<%=car.id%>/new" method="post">
 
             </form>
@@ -26,7 +26,7 @@
         </div>
     <%})%>
 <div class="edmundsLogo">
-    <a href="http://www.edmunds.com/?id=apis"><img src='img/100-square-white.png'></a>
+    <a href="http://www.edmunds.com/?id=apis"><img src='/img/100-square-white.png'></a>
 </div>
 
 <!--<input type="text" name="other" >
