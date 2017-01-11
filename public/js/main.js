@@ -73,6 +73,8 @@ $('.serviceForm').on('change', '.serviceName', function() {
 
 
 //ajax routes
+
+//delete service log
 $('.delete-link').on('click', function(e) {
     e.preventDefault();
     console.log('delete pressed');
@@ -94,6 +96,30 @@ $('.delete-link').on('click', function(e) {
     });
 });
 
+
+//edit service log
+$('.update-log').on('submit', function(e) {
+  e.preventDefault();
+  var logElement = $(this);
+  var logUrl = logElement.attr('action');
+  var logData = logElement.serialize();
+  console.log(logUrl);
+  console.log(logData);
+  $.ajax({
+    method: 'PUT',
+    url: logUrl,
+    data: logData
+  }).done(function(data) {
+    // get data returned from the PUT route
+    console.log(data);
+
+    // do stuff when the PUT action is complete
+    // teamElement.remove();
+
+    // or, you can redirect to another page
+    window.location.reload();
+  });
+});
 
 // function drawOptions(option){
 // option.forEach(function(item){

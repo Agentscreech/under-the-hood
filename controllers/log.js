@@ -6,18 +6,6 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 
 //display all logs for current car
 
-router.delete('/:carId/:serviceId', function(req,res){
-    console.log('trying to delete');
-    db.car_service.destroy({
-        where:{
-            carId: req.params.carId,
-            serviceId: req.params.serviceId
-        }
-    }).then(function(){
-        req.send();
-    });
-});
-
 
 router.get('/:id/:carId', isLoggedIn, function(req,res){
     db.car.find({
@@ -41,8 +29,7 @@ router.get('/:id/:carId', isLoggedIn, function(req,res){
                 ],
                 include: [db.car, db.service]
             }).then(function(services){
-                console.log(services);
-                res.send(services);
+                // console.log(services);
                 if(!services){
                     req.flash('error', 'No services records available');
                     res.redirect('/profile');
@@ -52,7 +39,7 @@ router.get('/:id/:carId', isLoggedIn, function(req,res){
                     }).then(function(user){
                         // console.log(user);
                         // console.log(services[0].service.name);
-                        res.render('log', {user:user,services:services});
+                        res.render('log/showlog', {user:user,services:services});
                         // res.send(services);
                     }).catch(function(err){
                         req.flash('error', error.message);
@@ -66,11 +53,66 @@ router.get('/:id/:carId', isLoggedIn, function(req,res){
         }
     });
 
+});
 
+//update log
+router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
+    // res.send(req.body);
+    db.car.find({
+        where:{
+            id:req.params.carId
+        }
+    }).then(function(car){
+        if(req.user.id == car.userId){
+            db.car_service.findAll({
+                where:{
+                    carId: req.params.carId,
+                },
+                attributes: [
+                    'id',
+                    'carId',
+                    'serviceId',
+                    'cost',
+                    'mileage',
+                    'option',
+                    'notes'
+                ],
+                include: [db.car, db.service]
+            }).then(function(services){
+                res.render('log/editlog', {services:services});
+            });
+        }
+    });
+});
 
+router.put('/edit/:carId', function(req, res) {
+    console.log('trying to update');
+    console.log(req.body);
+    for (var i = 0; i < req.body["id"].length;i++){
+        var toDB = {};
+        for (var option in req.body){
+            toDB[option] = req.body[option][i];
+            db.car_service.update({
+                    cost: toDB.cost,
+                    mileage: toDB.mileage,
+                    option: toDB.option,
+                    notes: toDB.notes
+                },{where: {id: toDB.id,}
+            });
+        }
+    }
+    //   db.car_service.update({
+    //     where:{
+      //
+    //     }
+    //   }).then(function() {
+    //       res.send({message: 'success'});
+    //   });
+    res.send('ok');
 
 });
 
+// add new log
 router.post('/:carId/new', isLoggedIn, function(req,res){
     var car = req.params.carId;
     if(req.body.option === undefined){
@@ -96,6 +138,18 @@ router.post('/:carId/new', isLoggedIn, function(req,res){
 
 });
 
+
+//delete log
+router.delete('/:id', function(req,res){
+    console.log('trying to delete');
+    db.car_service.destroy({
+        where:{
+            id:req.params.id
+        }
+    }).then(function(){
+        res.send();
+    });
+});
 
 
 module.exports = router;

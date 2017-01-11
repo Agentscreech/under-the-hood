@@ -1,4 +1,4 @@
-<h2 class="text-center">Log for your <%=services[0].car.make%></h2>
+<h2 class="text-center">Log for your <%=services[0].car.year%> <span class= "text-capitalize"><%=services[0].car.make%> <%=services[0].car.model%></span></h2>
 
 
     <!-- service.car_service.cost, .mileage, .option, .notes -->
@@ -32,7 +32,7 @@
     <% services.forEach(function(item){%>
             <div class="row">
                 <div class="col-xs-3">
-                    <p class="text-center"><%=item.service.name%></p><a href="/log/<%=item.carId%>/<%=item.service.id%>" class="delete-link">delete</a>
+                    <p class="text-center text-capitalize"><%=item.service.name%></p>
                 </div>
                 <div class="col-xs-2">
                     <p class='text-center'>$<%=item.cost%></p>
@@ -46,10 +46,12 @@
                 <div class="col-xs-2">
                     <p class ='text-center'><%=item.notes%></p>
                 </div>
-
+                <div className="col-xs-2">
+                    <a href="/log/<%=item.id%>" class="delete-link btn btn-danger">Delete</a>
+                </div>
             </div>
     <%});%>
     </div>
-<a href="/profile" class="btn btn-primary">Back to garage</a>
+<a href="/profile" class="btn btn-primary">Back to garage</a> <a href="/log/edit/<%=user.id%>/<%=services[0].car.id%>" class="btn btn-info">Edit</a>
 
     <!--<%=user.name%>-->
