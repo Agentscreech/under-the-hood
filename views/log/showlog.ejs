@@ -3,13 +3,11 @@
 
     <!-- service.car_service.cost, .mileage, .option, .notes -->
 
-    <%=user.name%>
-
     <h4>Number of services: <%=services.length%></h4>
     <p></p>
 <div class="well">
     <div class="row">
-        <div class="col-xs-3">
+        <div class="col-xs-2 ">
             <p class="text-center">Service Done:</p>
         </div>
         <div class="col-xs-2">
@@ -31,7 +29,7 @@
 
     <% services.forEach(function(item){%>
             <div class="row">
-                <div class="col-xs-3">
+                <div class="col-xs-2">
                     <p class="text-center text-capitalize"><%=item.service.name%></p>
                 </div>
                 <div class="col-xs-2">

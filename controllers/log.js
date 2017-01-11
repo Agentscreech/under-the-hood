@@ -7,15 +7,15 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 //display all logs for current car
 
 
-router.get('/:id/:carId', isLoggedIn, function(req,res){
+router.get('/:id/:carId', isLoggedIn, function(req, res) {
     db.car.find({
-        where:{
-            id:req.params.carId
+        where: {
+            id: req.params.carId
         }
-    }).then(function(car){
-        if(req.user.id == car.userId){
+    }).then(function(car) {
+        if (req.user.id == car.userId) {
             db.car_service.findAll({
-                where:{
+                where: {
                     carId: req.params.carId,
                 },
                 attributes: [
@@ -28,20 +28,25 @@ router.get('/:id/:carId', isLoggedIn, function(req,res){
                     'notes'
                 ],
                 include: [db.car, db.service]
-            }).then(function(services){
+            }).then(function(services) {
                 // console.log(services);
-                if(!services){
+                if (!services) {
                     req.flash('error', 'No services records available');
                     res.redirect('/profile');
                 } else {
                     db.user.find({
-                        where:{id: services[0].car.userId}
-                    }).then(function(user){
+                        where: {
+                            id: services[0].car.userId
+                        }
+                    }).then(function(user) {
                         // console.log(user);
                         // console.log(services[0].service.name);
-                        res.render('log/showlog', {user:user,services:services});
+                        res.render('log/showlog', {
+                            user: user,
+                            services: services
+                        });
                         // res.send(services);
-                    }).catch(function(err){
+                    }).catch(function(err) {
                         req.flash('error', error.message);
                         res.redirect('/profile');
                     });
@@ -59,13 +64,13 @@ router.get('/:id/:carId', isLoggedIn, function(req,res){
 router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
     // res.send(req.body);
     db.car.find({
-        where:{
-            id:req.params.carId
+        where: {
+            id: req.params.carId
         }
-    }).then(function(car){
-        if(req.user.id == car.userId){
+    }).then(function(car) {
+        if (req.user.id == car.userId) {
             db.car_service.findAll({
-                where:{
+                where: {
                     carId: req.params.carId,
                 },
                 attributes: [
@@ -78,8 +83,10 @@ router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
                     'notes'
                 ],
                 include: [db.car, db.service]
-            }).then(function(services){
-                res.render('log/editlog', {services:services});
+            }).then(function(services) {
+                res.render('log/editlog', {
+                    services: services
+                });
             });
         }
     });
@@ -88,44 +95,63 @@ router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
 router.put('/edit/:carId', function(req, res) {
     console.log('trying to update');
     console.log(req.body);
-    for (var i = 0; i < req.body["id"].length;i++){
-        var toDB = {};
-        for (var option in req.body){
-            toDB[option] = req.body[option][i];
+    if(req.body['id'].length == 2){ //jshint ignore:line
+        db.car_service.update({
+            cost: req.body.cost,
+            mileage: req.body.mileage,
+            option: req.body.option,
+            notes: req.body.notes
+        }, {
+            where: {
+                id: req.body.id,
+            }
+        }).catch(function(error) { //jshint ignore:line
+            req.flash('error', error.message);
+            res.send('error');
+        });
+    } else {
+        for (var i = 0; i < req.body["id"].length; i++) { //jshint ignore:line
+            var toDB = {};
+            for (var option in req.body) {
+                toDB[option] = req.body[option][i];
+                console.log("object to insert", toDB);
+            }
             db.car_service.update({
-                    cost: toDB.cost,
-                    mileage: toDB.mileage,
-                    option: toDB.option,
-                    notes: toDB.notes
-                },{where: {id: toDB.id,}
+                cost: toDB.cost,
+                mileage: toDB.mileage,
+                option: toDB.option,
+                notes: toDB.notes
+            }, {
+                where: {
+                    id: toDB.id,
+                }
+            }).catch(function(error) { //jshint ignore:line
+                req.flash('error', error.message);
+                res.send('error');
             });
+            console.log("this is what should have been inserted", toDB);
         }
     }
-    //   db.car_service.update({
-    //     where:{
-      //
-    //     }
-    //   }).then(function() {
-    //       res.send({message: 'success'});
-    //   });
+
+    req.flash('success', 'Update successful');
     res.send('ok');
 
 });
 
 // add new log
-router.post('/:carId/new', isLoggedIn, function(req,res){
+router.post('/:carId/new', isLoggedIn, function(req, res) {
     var car = req.params.carId;
-    if(req.body.option === undefined){
+    if (req.body.option === undefined) {
         req.body.option = null;
     }
     db.car_service.create({
-        carId:car,
-        serviceId:req.body.serviceId,
-        cost:req.body.cost,
-        mileage:req.body.mileage,
-        notes:req.body.notes,
-        option:req.body.option
-    }).then(function(test){
+        carId: car,
+        serviceId: req.body.serviceId,
+        cost: req.body.cost,
+        mileage: req.body.mileage,
+        notes: req.body.notes,
+        option: req.body.option
+    }).then(function(test) {
         // if(req.body.other){
         //     db.other.findOrCreate({
         //         where:{
@@ -140,13 +166,13 @@ router.post('/:carId/new', isLoggedIn, function(req,res){
 
 
 //delete log
-router.delete('/:id', function(req,res){
+router.delete('/:id', function(req, res) {
     console.log('trying to delete');
     db.car_service.destroy({
-        where:{
-            id:req.params.id
+        where: {
+            id: req.params.id
         }
-    }).then(function(){
+    }).then(function() {
         res.send();
     });
 });
