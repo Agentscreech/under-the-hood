@@ -32,7 +32,7 @@
     <% services.forEach(function(item){%>
             <div class="row">
                 <div class="col-xs-3">
-                    <p class="text-center"><%=item.service.name%></p>
+                    <p class="text-center"><%=item.service.name%></p><a href="/log/<%=item.carId%>/<%=item.service.id%>" class="delete-link">delete</a>
                 </div>
                 <div class="col-xs-2">
                     <p class='text-center'>$<%=item.cost%></p>

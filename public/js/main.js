@@ -71,6 +71,30 @@ $('.serviceForm').on('change', '.serviceName', function() {
     }
 });
 
+
+//ajax routes
+$('.delete-link').on('click', function(e) {
+    e.preventDefault();
+    console.log('delete pressed');
+    var element = $(this);
+    var service = element.attr('href');
+    console.log(service);
+    $.ajax({
+        method: 'DELETE',
+        url: service
+    }).done(function(data) {
+        // get data returned from the DELETE route
+        console.log(data);
+
+        // do stuff when the DELETE action is complete
+        // element.remove();
+
+        // or, you can redirect to another page
+        window.location.reload();
+    });
+});
+
+
 // function drawOptions(option){
 // option.forEach(function(item){
 //     $(option).append("<option value="+item.id+">"+item.name+"</option>");

@@ -6,23 +6,44 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 
 //display all logs for current car
 
+router.delete('/:carId/:serviceId', function(req,res){
+    console.log('trying to delete');
+    db.car_service.destroy({
+        where:{
+            carId: req.params.carId,
+            serviceId: req.params.serviceId
+        }
+    }).then(function(){
+        req.send();
+    });
+});
+
+
 router.get('/:id/:carId', isLoggedIn, function(req,res){
-    //TODO: add check to make sure the id of the user making the request is the one that is logged in
     db.car.find({
         where:{
             id:req.params.carId
         }
     }).then(function(car){
-        console.log("!!!USER ID !!!",req.user.id,"!!!CAR OWNER ID!!!",car.userId);
         if(req.user.id == car.userId){
             db.car_service.findAll({
                 where:{
                     carId: req.params.carId,
                 },
+                attributes: [
+                    'id',
+                    'carId',
+                    'serviceId',
+                    'cost',
+                    'mileage',
+                    'option',
+                    'notes'
+                ],
                 include: [db.car, db.service]
             }).then(function(services){
-                // console.log(services[0]);
-                if(!services[0]){
+                console.log(services);
+                res.send(services);
+                if(!services){
                     req.flash('error', 'No services records available');
                     res.redirect('/profile');
                 } else {
@@ -74,5 +95,7 @@ router.post('/:carId/new', isLoggedIn, function(req,res){
     });
 
 });
+
+
 
 module.exports = router;
