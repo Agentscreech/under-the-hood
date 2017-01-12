@@ -19,9 +19,9 @@ var services = [
     {
         name:"wiper",
     },
-    {
-        name:"tire",
-    },
+    // {
+    //     name:"tire",
+    // },
     {
         name:"air filter"
     },
