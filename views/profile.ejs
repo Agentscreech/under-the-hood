@@ -14,7 +14,7 @@
         <%var service = JSON.parse(car.serviceDetails);%>
         <h4><%=car.year%> <span class="text-capitalize"><%=car.make%> <%=car.model%> </span><%=car.style%></h4>
         <p><strong>Details:</strong></p>
-        <p><%=detail.engine.size%>L <%=detail.engine.configuration%><%=detail.engine.cylinder%> <%if(detail.engine.valve){%><%=detail.engine.totalValves%> valve with <%=detail.engine.valve.timing%> <%=detail.engine.valve.gear%><%}%></p>
+        <p><%=detail.engine.size%>L <%=detail.engine.configuration%><%=detail.engine.cylinder%> <%if(detail.engine.compressionRatio){%> at <%=detail.engine.compressionRatio%>:1 compression.<%}%>  <%if(detail.engine.valve){%><%=detail.engine.totalValves%> valve with <%=detail.engine.valve.timing%> <%=detail.engine.valve.gear%><%}%></p>
         <p>with a <%=detail.transmission.numberOfSpeeds%> speed <%=detail.transmission.transmissionType.toLowerCase()%>, <%=detail.drivenWheels%></p>
         <p>making <%=detail.engine.horsepower%> hp at <%=detail.engine.rpm.horsepower%> RPM and <%=detail.engine.torque%> ft/lbs of torque at <%=detail.engine.rpm.torque%> RPM</p>
         <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway </p>

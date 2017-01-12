@@ -5,8 +5,6 @@ var isLoggedIn = require('../middleware/isLoggedIn');
 
 
 //display all logs for current car
-
-
 router.get('/:id/:carId', isLoggedIn, function(req, res) {
     db.car.find({
         where: {
@@ -29,8 +27,7 @@ router.get('/:id/:carId', isLoggedIn, function(req, res) {
                 ],
                 include: [db.car, db.service]
             }).then(function(services) {
-                console.log(services);
-                // console.log(services[0].car);
+                // console.log(services);
                 if (services.length > 0) {
                     db.user.find({
                         where: {
@@ -93,7 +90,7 @@ router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
     });
 });
 
-router.put('/edit/:carId', function(req, res) {
+router.put('/edit/:carId', function(req, res) { //first line is to handle if there is only one log
     if(req.body['id'].length == 2){ //jshint ignore:line
         db.car_service.update({
             cost: req.body.cost,
@@ -133,7 +130,9 @@ router.put('/edit/:carId', function(req, res) {
     }
 
     req.flash('success', 'Update successful');
-    res.send('ok');
+    var url = "/log/"+req.user.id+"/"+req.params.carId;
+    console.log('trying to send ', url);
+    res.send(url);
 
 });
 

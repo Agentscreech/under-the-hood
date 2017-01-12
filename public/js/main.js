@@ -11,9 +11,9 @@ $(document).ready(function() {
         $(type).append('<select class="form-select serviceName" name="serviceId"><option>Select Type</option></select>');
         $(type).append('<div class="option"></div>');
         $(type).append('<p>Cost:</p>');
-        $(type).append('<input class="form-control" type="text" name="cost" placeholder="19.99"></input>');
+        $(type).append('<input class="form-control" type="number" name="cost" placeholder="19.99"></input>');
         $(type).append('<p>Mileage:</p>');
-        $(type).append('<input class="form-control" type="text" name="mileage" placeholder="804450"></input>');
+        $(type).append('<input class="form-control" type="number" name="mileage" placeholder="804450"></input>');
         $(type).append('<p>Notes:</p>');
         $(type).append('<input class="form-control" type="text" name="notes" placeholder="place was closed Sundays"></input>');
         $(type).append('<button type="submit" class="btn btn-success">Add</button>');
@@ -136,7 +136,7 @@ $('.update-log').on('submit', function(e) {
         // teamElement.remove();
 
         // or, you can redirect to another page
-        window.location.reload();
+        window.location.assign(data);
     });
 });
 

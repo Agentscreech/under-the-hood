@@ -33,10 +33,10 @@
                         <p class="text-center text-capitalize"><%=item.service.name%></p>
                     </div>
                     <div class="col-xs-2">
-                        <input class='text-center' type="text" name="cost" value="<%=item.cost%>"></input>
+                        <input class='text-center' type="number" name="cost" value="<%=item.cost%>"></input>
                     </div>
                     <div class="col-xs-2">
-                        <input class='text-center' type="text" name="mileage" value="<%=item.mileage%>"></input>
+                        <input class='text-center' type="number" name="mileage" value="<%=item.mileage%>"></input>
                     </div>
                     <div class="col-xs-2">
                         <input class='text-center' type="text" name="option" value="<%=item.option%>"></input>
@@ -45,7 +45,6 @@
                         <input class='text-center' type="text" name="notes" value="<%=item.notes%>"></input>
                     </div>
                     <div class="col-xs-2">
-                          <a href="/log/<%=item.id%>" class="delete-link btn btn-dangerk btn-sm">Delete</a>
                     </div>
                 </div>
         <%});%>
