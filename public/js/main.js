@@ -1,4 +1,4 @@
-$('document').ready(function() {
+$(document).ready(function() {
 
     // draws form to add service
     $('.addLog').click(function() {
@@ -132,9 +132,11 @@ $('.update-log').on('submit', function(e) {
 //draw new car options
 
 $('#newCar').on('click', function(){
+    $('#addCarForm').empty();
     $('#addCarForm').append('<form class="form-control" action="profile/car/new" id="carForm" method="post"></form>');
     $('#carForm').append('<label for="year">Select Model Year: </label>');
     $('#carForm').append('<select id="carYear" class="form-select" name="year"></select>');
+    $('#carYear').append('<option>Select year</option>');
     drawYearOptions();
 });
 
@@ -142,22 +144,38 @@ $('#newCar').on('click', function(){
 
 function drawYearOptions(){
     var date = new Date().getFullYear();
-    for (var i = date; i > 1919 ;i--){
+    for (var i = date; i > 1989 ;i--){
         $('#carYear').append('<option value='+i+'>'+i+'</option>');
     }
 
 }
 
-
+//when you select year
 $('#addCarForm').on('change', '#carYear', function(e){
+    $('#carYear').nextAll().remove();
+    $('#carMake').remove();
+    $('#carModel').remove();
     var year = ($('#carYear').val());
     // var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
     $.get('/test').done(function(res){
         console.log(res);
+        var makes = res.makes;
         var modelList = {};
         $('#carForm').append('<label for="make">Select Make:</label>');
         $('#carForm').append('<select id="carMake" class="form-select" name="make"></select>');
-        drawMakes(res.makes);
+        $('#carMake').append('<option>Select Make</option>');
+        drawMakes(makes);
+        $('#addCarForm').on('change', '#carMake', function(e1){
+            $('#carMake').nextAll().remove();
+            $('#carModel').remove();
+            var make = $('#carMake').val();
+            var makeNice = makes[make].niceName;
+            console.log(makes[make]);
+            $('#carForm').append('<label for="model">Select Model:</label>');
+            $('#carForm').append('<select id="carModel" class="form-select" name="model"></select>');
+            $('#carModel').append('<option>Select Model</option>');
+            drawModels(makes[make].models);
+        });
     });
 });
 
@@ -170,6 +188,18 @@ function drawMakes(makes){
         $('#carMake').append('<option value='+makeList[make]+'>'+make+'</option>');
     }
 }
+function drawModels(models){
+    var modelList = {};
+    models.forEach(function(model, index){
+        modelList[model.name] = index;
+    });
+    for(var model in modelList){
+        $('#carModel').append('<option value='+modelList[model]+'>'+model+'</option>');
+    }
+}
+
+//when you select makes
+
 
 
 // function drawOptions(option){
