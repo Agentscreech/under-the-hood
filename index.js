@@ -55,8 +55,12 @@ app.use('/log', require('./controllers/log'));
 
 
 //api test repsonses
-app.get('/test', function(req,res){
+app.get('/year', function(req,res){
     res.sendFile(__dirname+ "/carYearSample.json");
+
+});
+app.get('/style', function(req,res){
+    res.sendFile(__dirname+ "/carStyleSample.json");
 
 });
 

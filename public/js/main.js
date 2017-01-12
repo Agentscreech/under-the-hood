@@ -157,14 +157,14 @@ $('#addCarForm').on('change', '#carYear', function(e){
     $('#carModel').remove();
     var year = ($('#carYear').val());
     // var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
-    $.get('/test').done(function(res){
+    $.get('/year').done(function(res){
         console.log(res);
         var makes = res.makes;
-        var modelList = {};
         $('#carForm').append('<label for="make">Select Make:</label>');
         $('#carForm').append('<select id="carMake" class="form-select" name="make"></select>');
         $('#carMake').append('<option>Select Make</option>');
         drawMakes(makes);
+        //when you select the make
         $('#addCarForm').on('change', '#carMake', function(e1){
             $('#carMake').nextAll().remove();
             $('#carModel').remove();
@@ -175,9 +175,28 @@ $('#addCarForm').on('change', '#carYear', function(e){
             $('#carForm').append('<select id="carModel" class="form-select" name="model"></select>');
             $('#carModel').append('<option>Select Model</option>');
             drawModels(makes[make].models);
+            $('#addCarForm').on('change', '#carModel', function(e2){
+                $('#carModel').nextAll().remove();
+                $('#carStyle').remove();
+                var model = $('#carModel').val();
+                var modelNice = makes[make].models[model].niceName;
+                console.log(makes[make].models[model]);
+                $('#carForm').append('<label for="style">Select Style:</label>');
+                $('#carForm').append('<select id="carStyle" class="form-select" name="style"></select>');
+                $('#carStyle').append('<option>Select Style</option>');
+                // var getStyle = 'https://api.edmunds.com/api/vehicle/v2/'+makeNice+'/'+modelNice+'/'+year+'/styles?fmt=json&api_key=zw4dk88j42j7keu9zeuseebm&view=full';
+                $.get('/style').done(function(stylesList){
+                    styles = stylesList.styles;
+                    console.log(styles);
+                    drawStyles(styles);
+                });
+            });
         });
     });
 });
+//when you select the model (next API call)
+
+
 
 function drawMakes(makes){
     var makeList = {};
@@ -196,6 +215,13 @@ function drawModels(models){
     for(var model in modelList){
         $('#carModel').append('<option value='+modelList[model]+'>'+model+'</option>');
     }
+}
+function drawStyles(styles){
+    var styleList = {};
+    styles.forEach(function(style, index){
+        $('#carStyle').append('<option value='+index+'>'+style.name+'</option>');
+    });
+    
 }
 
 //when you select makes

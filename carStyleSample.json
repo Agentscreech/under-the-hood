@@ -1,0 +1,1185 @@
+{
+    "styles": [{
+        "make": {
+            "id": 200000089,
+            "name": "Infiniti",
+            "niceName": "infiniti"
+        },
+        "model": {
+            "id": "Infiniti_G37",
+            "name": "G37",
+            "niceName": "g37"
+        },
+        "engine": {
+            "id": "200095287",
+            "name": "Engine",
+            "equipmentType": "ENGINE",
+            "compressionRatio": 11.0,
+            "cylinder": 6,
+            "size": 3.7,
+            "displacement": 3699.0,
+            "configuration": "V",
+            "fuelType": "premium unleaded (required)",
+            "horsepower": 330,
+            "torque": 270,
+            "totalValves": 24,
+            "manufacturerEngineCode": "VQ37VHR",
+            "type": "gas",
+            "code": "6VNAG3.7",
+            "compressorType": "NA",
+            "rpm": {
+                "horsepower": 7000,
+                "torque": 5200
+            },
+            "valve": {
+                "timing": "variable valve timing",
+                "gear": "double overhead camshaft"
+            }
+        },
+        "transmission": {
+            "id": "200095288",
+            "name": "5A",
+            "equipmentType": "TRANSMISSION",
+            "automaticType": "Shiftable automatic",
+            "transmissionType": "AUTOMATIC",
+            "numberOfSpeeds": "5"
+        },
+        "drivenWheels": "rear wheel drive",
+        "numOfDoors": "2",
+        "options": [{
+            "category": "Other",
+            "options": [{
+                "id": "200095254",
+                "name": "Rear Spoiler",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 550.0,
+                    "baseInvoice": 474.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Rear Spoiler",
+                "manufactureOptionCode": "R10"
+            }, {
+                "id": "200095255",
+                "name": "Sport Package",
+                "description": "Includes magnesium paddle shifters, 19\" wheels with P225/45R19 front and P245/40R19 rear tires, sport-tuned suspension, sport 4-piston front and 2-piston rear brakes, unique front fascia and side sills, sport-styled seats with thigh extensions and driver's power adjustable torso and thigh bolsters, sport-styled steering wheel stitching, aluminum pedals and viscous limited slip rear differential.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1850.0,
+                    "baseInvoice": 1595.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Sport Package",
+                "manufactureOptionCode": "S01"
+            }, {
+                "id": "200095252",
+                "name": "Technology Package",
+                "description": "Includes intelligent cruise control, adaptive front lighting system and pre-crash seat belts with motion sensor on brake pedal.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1150.0,
+                    "baseInvoice": 991.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Technology Package",
+                "manufactureOptionCode": "F01"
+            }, {
+                "id": "200095261",
+                "name": "Navigation Package",
+                "description": "Includes Infiniti hard drive navigation system with Infiniti controller and touch screen that also includes lane guidance and building footprints, 9.3GB music hard drive and compact flash slot which replaces 6-disc in-dash CD player, XM NavTraffic real-time traffic information, voice recognition for air conditioning, audio and navigation functions and RearView monitor.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 2200.0,
+                    "baseInvoice": 1896.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Navigation Package",
+                "manufactureOptionCode": "U01"
+            }, {
+                "id": "200095269",
+                "name": "Illuminated Kick Plates",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 330.0,
+                    "baseInvoice": 270.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Illuminated Kick Plates",
+                "manufactureOptionCode": "P93"
+            }, {
+                "id": "200095253",
+                "name": "Moonroof",
+                "description": "Includes power sliding glass moonroof with tilt feature and sunshade.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1000.0,
+                    "baseInvoice": 862.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Moonroof",
+                "manufactureOptionCode": "J01"
+            }, {
+                "id": "200095268",
+                "name": "Body-Colored Splash Guards",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 200.0,
+                    "baseInvoice": 158.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Body-Colored Splash Guards",
+                "manufactureOptionCode": "B94"
+            }, {
+                "id": "200095264",
+                "name": "Trunk Cargo Net",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 60.0,
+                    "baseInvoice": 43.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Trunk Cargo Net",
+                "manufactureOptionCode": "T92"
+            }, {
+                "id": "200095267",
+                "name": "4-Wheel Active Steer Package",
+                "description": "Includes front and rear active steering system.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1300.0,
+                    "baseInvoice": 1121.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "4-Wheel Active Steer Package",
+                "manufactureOptionCode": "V01"
+            }, {
+                "id": "200095258",
+                "name": "Performance Tire And Wheel Package",
+                "description": "Includes 19\" wheels with P225/45R19 front and P245/40R19 rear tires.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 650.0,
+                    "baseInvoice": 561.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Performance Tire and Wheel Package",
+                "manufactureOptionCode": "T01"
+            }, {
+                "id": "200095265",
+                "name": "Premium Package",
+                "description": "Includes power sliding glass moonroof with tilt feature and sunshade, Infiniti Studio On Wheels by Bose premium audio system with Burr Brown DAC, 3-way component front door speakers with 10-inch subwoofers and driver's audio stage mode, iPod interface system, driver's seat memory system with steering wheel and outside mirrors, steering wheel and exterior rearview mirror position synchronization, power driver's lumbar support, power tilt and telescopic steering wheel, auto-dimming rearview mirror with compass and Homelink, Bluetooth hands-free phone system, heated front seats and heated front door mirrors.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 3200.0,
+                    "baseInvoice": 2757.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Premium Package",
+                "manufactureOptionCode": "P01"
+            }, {
+                "id": "200095263",
+                "name": "Wood Trim",
+                "description": "Includes genuine African Rosewood trim on center console, instrument panel and doors.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 450.0,
+                    "baseInvoice": 388.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Wood Trim",
+                "manufactureOptionCode": "W01"
+            }, {
+                "id": "200095270",
+                "name": "Trunk Mat",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 105.0,
+                    "baseInvoice": 70.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Trunk Mat",
+                "manufactureOptionCode": "T95"
+            }]
+        }],
+        "colors": [{
+            "category": "Interior",
+            "options": [{
+                "id": "200095243",
+                "name": "Stone",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Stone",
+                "manufactureOptionCode": "W",
+                "colorChips": {
+                    "primary": {
+                        "r": 151,
+                        "g": 148,
+                        "b": 141,
+                        "hex": "97948D"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }, {
+                "id": "200095241",
+                "name": "Wheat",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Wheat",
+                "manufactureOptionCode": "C",
+                "colorChips": {
+                    "primary": {
+                        "r": 186,
+                        "g": 175,
+                        "b": 147,
+                        "hex": "BAAF93"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }, {
+                "id": "200095242",
+                "name": "Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Graphite",
+                "manufactureOptionCode": "G",
+                "colorChips": {
+                    "primary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }]
+        }, {
+            "category": "Exterior",
+            "options": [{
+                "id": "200095251",
+                "name": "Amethyst Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Amethyst Graphite",
+                "manufactureOptionCode": "K57",
+                "colorChips": {
+                    "primary": {
+                        "r": 125,
+                        "g": 121,
+                        "b": 125,
+                        "hex": "7D797D"
+                    }
+                }
+            }, {
+                "id": "200095247",
+                "name": "Blue Slate",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Blue Slate",
+                "manufactureOptionCode": "K52",
+                "colorChips": {
+                    "primary": {
+                        "r": 56,
+                        "g": 55,
+                        "b": 73,
+                        "hex": "383749"
+                    }
+                }
+            }, {
+                "id": "200095249",
+                "name": "Ivory Pearl",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Ivory Pearl",
+                "manufactureOptionCode": "QX1",
+                "colorChips": {
+                    "primary": {
+                        "r": 237,
+                        "g": 237,
+                        "b": 235,
+                        "hex": "EDEDEB"
+                    }
+                }
+            }, {
+                "id": "200095248",
+                "name": "Black Obsidian",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Black Obsidian",
+                "manufactureOptionCode": "KH3",
+                "colorChips": {
+                    "primary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                }
+            }, {
+                "id": "200095246",
+                "name": "Platinum Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Platinum Graphite",
+                "manufactureOptionCode": "K51",
+                "colorChips": {
+                    "primary": {
+                        "r": 125,
+                        "g": 125,
+                        "b": 127,
+                        "hex": "7D7D7F"
+                    }
+                }
+            }, {
+                "id": "200095244",
+                "name": "Athens Blue",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Athens Blue",
+                "manufactureOptionCode": "B21",
+                "colorChips": {
+                    "primary": {
+                        "r": 44,
+                        "g": 49,
+                        "b": 81,
+                        "hex": "2C3151"
+                    }
+                }
+            }, {
+                "id": "200095245",
+                "name": "Liquid Platinum",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Liquid Platinum",
+                "manufactureOptionCode": "K23",
+                "colorChips": {
+                    "primary": {
+                        "r": 160,
+                        "g": 160,
+                        "b": 160,
+                        "hex": "A0A0A0"
+                    }
+                }
+            }, {
+                "id": "200095250",
+                "name": "Vibrant Red",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Vibrant Red",
+                "manufactureOptionCode": "A54",
+                "colorChips": {
+                    "primary": {
+                        "r": 113,
+                        "g": 24,
+                        "b": 15,
+                        "hex": "71180F"
+                    }
+                }
+            }]
+        }],
+        "manufacturerCode": "99218",
+        "price": {
+            "baseMSRP": 35650.0,
+            "baseInvoice": 32780.0,
+            "deliveryCharges": 815.0,
+            "usedTmvRetail": 10749.0,
+            "usedPrivateParty": 9068.0,
+            "usedTradeIn": 7692.0,
+            "estimateTmv": false,
+            "tmvRecommendedRating": 0
+        },
+        "categories": {
+            "market": "Luxury,Performance",
+            "EPAClass": "Subcompact Cars",
+            "vehicleSize": "Midsize",
+            "primaryBodyType": "Car",
+            "vehicleStyle": "Coupe",
+            "vehicleType": "Car"
+        },
+        "id": 100912605,
+        "name": "Journey 2dr Coupe (3.7L 6cyl 5A)",
+        "year": {
+            "id": 100522871,
+            "year": 2008
+        },
+        "submodel": {
+            "body": "Coupe",
+            "modelName": "G37 Coupe",
+            "niceName": "coupe"
+        },
+        "trim": "Journey",
+        "states": ["USED"],
+        "squishVins": ["JNKCV64E8M"],
+        "MPG": {
+            "highway": "24",
+            "city": "18"
+        }
+    }, {
+        "make": {
+            "id": 200000089,
+            "name": "Infiniti",
+            "niceName": "infiniti"
+        },
+        "model": {
+            "id": "Infiniti_G37",
+            "name": "G37",
+            "niceName": "g37"
+        },
+        "engine": {
+            "id": "200095293",
+            "name": "Engine",
+            "equipmentType": "ENGINE",
+            "compressionRatio": 11.0,
+            "cylinder": 6,
+            "size": 3.7,
+            "displacement": 3699.0,
+            "configuration": "V",
+            "fuelType": "premium unleaded (required)",
+            "horsepower": 330,
+            "torque": 270,
+            "totalValves": 24,
+            "manufacturerEngineCode": "VQ37VHR",
+            "type": "gas",
+            "code": "6VNAG3.7",
+            "compressorType": "NA",
+            "rpm": {
+                "horsepower": 7000,
+                "torque": 5200
+            },
+            "valve": {
+                "timing": "variable valve timing",
+                "gear": "double overhead camshaft"
+            }
+        },
+        "transmission": {
+            "id": "200095294",
+            "name": "6M",
+            "equipmentType": "TRANSMISSION",
+            "transmissionType": "MANUAL",
+            "numberOfSpeeds": "6"
+        },
+        "drivenWheels": "rear wheel drive",
+        "numOfDoors": "2",
+        "options": [{
+            "category": "Other",
+            "options": [{
+                "id": "200095269",
+                "name": "Illuminated Kick Plates",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 330.0,
+                    "baseInvoice": 270.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Illuminated Kick Plates",
+                "manufactureOptionCode": "P93"
+            }, {
+                "id": "200095270",
+                "name": "Trunk Mat",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 105.0,
+                    "baseInvoice": 70.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Trunk Mat",
+                "manufactureOptionCode": "T95"
+            }, {
+                "id": "200095254",
+                "name": "Rear Spoiler",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 550.0,
+                    "baseInvoice": 474.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Rear Spoiler",
+                "manufactureOptionCode": "R10"
+            }, {
+                "id": "200095252",
+                "name": "Technology Package",
+                "description": "Includes intelligent cruise control, adaptive front lighting system and pre-crash seat belts with motion sensor on brake pedal.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1150.0,
+                    "baseInvoice": 991.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Technology Package",
+                "manufactureOptionCode": "F01"
+            }, {
+                "id": "200095267",
+                "name": "4-Wheel Active Steer Package",
+                "description": "Includes front and rear active steering system.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1300.0,
+                    "baseInvoice": 1121.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "4-Wheel Active Steer Package",
+                "manufactureOptionCode": "V01"
+            }, {
+                "id": "200095253",
+                "name": "Moonroof",
+                "description": "Includes power sliding glass moonroof with tilt feature and sunshade.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1000.0,
+                    "baseInvoice": 862.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Moonroof",
+                "manufactureOptionCode": "J01"
+            }, {
+                "id": "200095265",
+                "name": "Premium Package",
+                "description": "Includes power sliding glass moonroof with tilt feature and sunshade, Infiniti Studio On Wheels by Bose premium audio system with Burr Brown DAC, 3-way component front door speakers with 10-inch subwoofers and driver's audio stage mode, iPod interface system, driver's seat memory system with steering wheel and outside mirrors, steering wheel and exterior rearview mirror position synchronization, power driver's lumbar support, power tilt and telescopic steering wheel, auto-dimming rearview mirror with compass and Homelink, Bluetooth hands-free phone system, heated front seats and heated front door mirrors.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 3200.0,
+                    "baseInvoice": 2757.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Premium Package",
+                "manufactureOptionCode": "P01"
+            }, {
+                "id": "200095268",
+                "name": "Body-Colored Splash Guards",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 200.0,
+                    "baseInvoice": 158.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Body-Colored Splash Guards",
+                "manufactureOptionCode": "B94"
+            }, {
+                "id": "200095261",
+                "name": "Navigation Package",
+                "description": "Includes Infiniti hard drive navigation system with Infiniti controller and touch screen that also includes lane guidance and building footprints, 9.3GB music hard drive and compact flash slot which replaces 6-disc in-dash CD player, XM NavTraffic real-time traffic information, voice recognition for air conditioning, audio and navigation functions and RearView monitor.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 2200.0,
+                    "baseInvoice": 1896.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Navigation Package",
+                "manufactureOptionCode": "U01"
+            }, {
+                "id": "200095264",
+                "name": "Trunk Cargo Net",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 60.0,
+                    "baseInvoice": 43.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Trunk Cargo Net",
+                "manufactureOptionCode": "T92"
+            }]
+        }],
+        "colors": [{
+            "category": "Interior",
+            "options": [{
+                "id": "200095243",
+                "name": "Stone",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Stone",
+                "manufactureOptionCode": "W",
+                "colorChips": {
+                    "primary": {
+                        "r": 151,
+                        "g": 148,
+                        "b": 141,
+                        "hex": "97948D"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }, {
+                "id": "200095242",
+                "name": "Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Graphite",
+                "manufactureOptionCode": "G",
+                "colorChips": {
+                    "primary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }]
+        }, {
+            "category": "Exterior",
+            "options": [{
+                "id": "200095249",
+                "name": "Ivory Pearl",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Ivory Pearl",
+                "manufactureOptionCode": "QX1",
+                "colorChips": {
+                    "primary": {
+                        "r": 237,
+                        "g": 237,
+                        "b": 235,
+                        "hex": "EDEDEB"
+                    }
+                }
+            }, {
+                "id": "200095251",
+                "name": "Amethyst Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Amethyst Graphite",
+                "manufactureOptionCode": "K57",
+                "colorChips": {
+                    "primary": {
+                        "r": 125,
+                        "g": 121,
+                        "b": 125,
+                        "hex": "7D797D"
+                    }
+                }
+            }, {
+                "id": "200095246",
+                "name": "Platinum Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Platinum Graphite",
+                "manufactureOptionCode": "K51",
+                "colorChips": {
+                    "primary": {
+                        "r": 125,
+                        "g": 125,
+                        "b": 127,
+                        "hex": "7D7D7F"
+                    }
+                }
+            }, {
+                "id": "200095247",
+                "name": "Blue Slate",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Blue Slate",
+                "manufactureOptionCode": "K52",
+                "colorChips": {
+                    "primary": {
+                        "r": 56,
+                        "g": 55,
+                        "b": 73,
+                        "hex": "383749"
+                    }
+                }
+            }, {
+                "id": "200095244",
+                "name": "Athens Blue",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Athens Blue",
+                "manufactureOptionCode": "B21",
+                "colorChips": {
+                    "primary": {
+                        "r": 44,
+                        "g": 49,
+                        "b": 81,
+                        "hex": "2C3151"
+                    }
+                }
+            }, {
+                "id": "200095245",
+                "name": "Liquid Platinum",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Liquid Platinum",
+                "manufactureOptionCode": "K23",
+                "colorChips": {
+                    "primary": {
+                        "r": 160,
+                        "g": 160,
+                        "b": 160,
+                        "hex": "A0A0A0"
+                    }
+                }
+            }, {
+                "id": "200095248",
+                "name": "Black Obsidian",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Black Obsidian",
+                "manufactureOptionCode": "KH3",
+                "colorChips": {
+                    "primary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                }
+            }, {
+                "id": "200095250",
+                "name": "Vibrant Red",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Vibrant Red",
+                "manufactureOptionCode": "A54",
+                "colorChips": {
+                    "primary": {
+                        "r": 113,
+                        "g": 24,
+                        "b": 15,
+                        "hex": "71180F"
+                    }
+                }
+            }]
+        }],
+        "manufacturerCode": "99368",
+        "price": {
+            "baseMSRP": 36200.0,
+            "baseInvoice": 33284.0,
+            "deliveryCharges": 815.0,
+            "usedTmvRetail": 10776.0,
+            "usedPrivateParty": 9092.0,
+            "usedTradeIn": 7715.0,
+            "estimateTmv": false,
+            "tmvRecommendedRating": 0
+        },
+        "categories": {
+            "market": "Luxury,High-Performance",
+            "EPAClass": "Subcompact Cars",
+            "vehicleSize": "Midsize",
+            "primaryBodyType": "Car",
+            "vehicleStyle": "Coupe",
+            "vehicleType": "Car"
+        },
+        "id": 100912606,
+        "name": "Sport 2dr Coupe (3.7L 6cyl 6M)",
+        "year": {
+            "id": 100522871,
+            "year": 2008
+        },
+        "submodel": {
+            "body": "Coupe",
+            "modelName": "G37 Coupe",
+            "niceName": "coupe"
+        },
+        "trim": "Sport",
+        "states": ["USED"],
+        "squishVins": ["JNKCV64E8M"],
+        "MPG": {
+            "highway": "26",
+            "city": "17"
+        }
+    }, {
+        "make": {
+            "id": 200000089,
+            "name": "Infiniti",
+            "niceName": "infiniti"
+        },
+        "model": {
+            "id": "Infiniti_G37",
+            "name": "G37",
+            "niceName": "g37"
+        },
+        "engine": {
+            "id": "200095281",
+            "name": "Engine",
+            "equipmentType": "ENGINE",
+            "compressionRatio": 11.0,
+            "cylinder": 6,
+            "size": 3.7,
+            "displacement": 3699.0,
+            "configuration": "V",
+            "fuelType": "premium unleaded (required)",
+            "horsepower": 330,
+            "torque": 270,
+            "totalValves": 24,
+            "manufacturerEngineCode": "VQ37VHR",
+            "type": "gas",
+            "code": "6VNAG3.7",
+            "compressorType": "NA",
+            "rpm": {
+                "horsepower": 7000,
+                "torque": 5200
+            },
+            "valve": {
+                "timing": "variable valve timing",
+                "gear": "double overhead camshaft"
+            }
+        },
+        "transmission": {
+            "id": "200095282",
+            "name": "5A",
+            "equipmentType": "TRANSMISSION",
+            "automaticType": "Shiftable automatic",
+            "transmissionType": "AUTOMATIC",
+            "numberOfSpeeds": "5"
+        },
+        "drivenWheels": "rear wheel drive",
+        "numOfDoors": "2",
+        "options": [{
+            "category": "Other",
+            "options": [{
+                "id": "200095252",
+                "name": "Technology Package",
+                "description": "Includes intelligent cruise control, adaptive front lighting system and pre-crash seat belts with motion sensor on brake pedal.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1150.0,
+                    "baseInvoice": 991.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Technology Package",
+                "manufactureOptionCode": "F01"
+            }, {
+                "id": "200095267",
+                "name": "4-Wheel Active Steer Package",
+                "description": "Includes front and rear active steering system.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1300.0,
+                    "baseInvoice": 1121.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "4-Wheel Active Steer Package",
+                "manufactureOptionCode": "V01"
+            }, {
+                "id": "200095263",
+                "name": "Wood Trim",
+                "description": "Includes genuine African Rosewood trim on center console, instrument panel and doors.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 450.0,
+                    "baseInvoice": 388.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Wood Trim",
+                "manufactureOptionCode": "W01"
+            }, {
+                "id": "200095268",
+                "name": "Body-Colored Splash Guards",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 200.0,
+                    "baseInvoice": 158.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Body-Colored Splash Guards",
+                "manufactureOptionCode": "B94"
+            }, {
+                "id": "200095264",
+                "name": "Trunk Cargo Net",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 60.0,
+                    "baseInvoice": 43.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Trunk Cargo Net",
+                "manufactureOptionCode": "T92"
+            }, {
+                "id": "200095265",
+                "name": "Premium Package",
+                "description": "Includes power sliding glass moonroof with tilt feature and sunshade, Infiniti Studio On Wheels by Bose premium audio system with Burr Brown DAC, 3-way component front door speakers with 10-inch subwoofers and driver's audio stage mode, iPod interface system, driver's seat memory system with steering wheel and outside mirrors, steering wheel and exterior rearview mirror position synchronization, power driver's lumbar support, power tilt and telescopic steering wheel, auto-dimming rearview mirror with compass and Homelink, Bluetooth hands-free phone system, heated front seats and heated front door mirrors.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 3200.0,
+                    "baseInvoice": 2757.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Premium Package",
+                "manufactureOptionCode": "P01"
+            }, {
+                "id": "200095269",
+                "name": "Illuminated Kick Plates",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 330.0,
+                    "baseInvoice": 270.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Illuminated Kick Plates",
+                "manufactureOptionCode": "P93"
+            }, {
+                "id": "200095253",
+                "name": "Moonroof",
+                "description": "Includes power sliding glass moonroof with tilt feature and sunshade.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1000.0,
+                    "baseInvoice": 862.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Moonroof",
+                "manufactureOptionCode": "J01"
+            }, {
+                "id": "200095270",
+                "name": "Trunk Mat",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 105.0,
+                    "baseInvoice": 70.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Trunk Mat",
+                "manufactureOptionCode": "T95"
+            }, {
+                "id": "200095254",
+                "name": "Rear Spoiler",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 550.0,
+                    "baseInvoice": 474.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Rear Spoiler",
+                "manufactureOptionCode": "R10"
+            }, {
+                "id": "200095258",
+                "name": "Performance Tire And Wheel Package",
+                "description": "Includes 19\" wheels with P225/45R19 front and P245/40R19 rear tires.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 650.0,
+                    "baseInvoice": 561.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Performance Tire and Wheel Package",
+                "manufactureOptionCode": "T01"
+            }, {
+                "id": "200095255",
+                "name": "Sport Package",
+                "description": "Includes magnesium paddle shifters, 19\" wheels with P225/45R19 front and P245/40R19 rear tires, sport-tuned suspension, sport 4-piston front and 2-piston rear brakes, unique front fascia and side sills, sport-styled seats with thigh extensions and driver's power adjustable torso and thigh bolsters, sport-styled steering wheel stitching, aluminum pedals and viscous limited slip rear differential.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 1850.0,
+                    "baseInvoice": 1595.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Sport Package",
+                "manufactureOptionCode": "S01"
+            }, {
+                "id": "200095261",
+                "name": "Navigation Package",
+                "description": "Includes Infiniti hard drive navigation system with Infiniti controller and touch screen that also includes lane guidance and building footprints, 9.3GB music hard drive and compact flash slot which replaces 6-disc in-dash CD player, XM NavTraffic real-time traffic information, voice recognition for air conditioning, audio and navigation functions and RearView monitor.",
+                "equipmentType": "OPTION",
+                "price": {
+                    "baseMSRP": 2200.0,
+                    "baseInvoice": 1896.0,
+                    "estimateTmv": false
+                },
+                "manufactureOptionName": "Navigation Package",
+                "manufactureOptionCode": "U01"
+            }]
+        }],
+        "colors": [{
+            "category": "Interior",
+            "options": [{
+                "id": "200095242",
+                "name": "Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Graphite",
+                "manufactureOptionCode": "G",
+                "colorChips": {
+                    "primary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }, {
+                "id": "200095243",
+                "name": "Stone",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Stone",
+                "manufactureOptionCode": "W",
+                "colorChips": {
+                    "primary": {
+                        "r": 151,
+                        "g": 148,
+                        "b": 141,
+                        "hex": "97948D"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }, {
+                "id": "200095241",
+                "name": "Wheat",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Wheat",
+                "manufactureOptionCode": "C",
+                "colorChips": {
+                    "primary": {
+                        "r": 186,
+                        "g": 175,
+                        "b": 147,
+                        "hex": "BAAF93"
+                    }
+                },
+                "fabricTypes": [{
+                    "name": "FABRIC_TYPE_1",
+                    "value": "leather"
+                }]
+            }]
+        }, {
+            "category": "Exterior",
+            "options": [{
+                "id": "200095246",
+                "name": "Platinum Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Platinum Graphite",
+                "manufactureOptionCode": "K51",
+                "colorChips": {
+                    "primary": {
+                        "r": 125,
+                        "g": 125,
+                        "b": 127,
+                        "hex": "7D7D7F"
+                    }
+                }
+            }, {
+                "id": "200095248",
+                "name": "Black Obsidian",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Black Obsidian",
+                "manufactureOptionCode": "KH3",
+                "colorChips": {
+                    "primary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                }
+            }, {
+                "id": "200095247",
+                "name": "Blue Slate",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Blue Slate",
+                "manufactureOptionCode": "K52",
+                "colorChips": {
+                    "primary": {
+                        "r": 56,
+                        "g": 55,
+                        "b": 73,
+                        "hex": "383749"
+                    }
+                }
+            }, {
+                "id": "200095245",
+                "name": "Liquid Platinum",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Liquid Platinum",
+                "manufactureOptionCode": "K23",
+                "colorChips": {
+                    "primary": {
+                        "r": 160,
+                        "g": 160,
+                        "b": 160,
+                        "hex": "A0A0A0"
+                    }
+                }
+            }, {
+                "id": "200095250",
+                "name": "Vibrant Red",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Vibrant Red",
+                "manufactureOptionCode": "A54",
+                "colorChips": {
+                    "primary": {
+                        "r": 113,
+                        "g": 24,
+                        "b": 15,
+                        "hex": "71180F"
+                    }
+                }
+            }, {
+                "id": "200095244",
+                "name": "Athens Blue",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Athens Blue",
+                "manufactureOptionCode": "B21",
+                "colorChips": {
+                    "primary": {
+                        "r": 44,
+                        "g": 49,
+                        "b": 81,
+                        "hex": "2C3151"
+                    }
+                }
+            }, {
+                "id": "200095251",
+                "name": "Amethyst Graphite",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Amethyst Graphite",
+                "manufactureOptionCode": "K57",
+                "colorChips": {
+                    "primary": {
+                        "r": 125,
+                        "g": 121,
+                        "b": 125,
+                        "hex": "7D797D"
+                    }
+                }
+            }, {
+                "id": "200095249",
+                "name": "Ivory Pearl",
+                "equipmentType": "COLOR",
+                "manufactureOptionName": "Ivory Pearl",
+                "manufactureOptionCode": "QX1",
+                "colorChips": {
+                    "primary": {
+                        "r": 237,
+                        "g": 237,
+                        "b": 235,
+                        "hex": "EDEDEB"
+                    }
+                }
+            }]
+        }],
+        "manufacturerCode": "99118",
+        "price": {
+            "baseMSRP": 34900.0,
+            "baseInvoice": 32093.0,
+            "deliveryCharges": 815.0,
+            "usedTmvRetail": 10021.0,
+            "usedPrivateParty": 8644.0,
+            "usedTradeIn": 7516.0,
+            "estimateTmv": false,
+            "tmvRecommendedRating": 0
+        },
+        "categories": {
+            "market": "Luxury,Performance",
+            "EPAClass": "Subcompact Cars",
+            "vehicleSize": "Midsize",
+            "primaryBodyType": "Car",
+            "vehicleStyle": "Coupe",
+            "vehicleType": "Car"
+        },
+        "id": 100912604,
+        "name": "2dr Coupe (3.7L 6cyl 5A)",
+        "year": {
+            "id": 100522871,
+            "year": 2008
+        },
+        "submodel": {
+            "body": "Coupe",
+            "modelName": "G37 Coupe",
+            "niceName": "coupe"
+        },
+        "trim": "Base",
+        "states": ["USED"],
+        "squishVins": ["JNKCV64E8M"],
+        "MPG": {
+            "highway": "24",
+            "city": "18"
+        }
+    }],
+    "stylesCount": 3
+}
