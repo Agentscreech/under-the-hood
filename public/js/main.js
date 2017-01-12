@@ -82,6 +82,20 @@ $('.serviceForm').on('change', '.serviceName', function() {
 
 //ajax routes
 
+//delete car
+
+$('.delete-car').on('click', function(e){
+    e.preventDefault();
+    var element = $(this);
+    var car = element.attr('href');
+    $.ajax({
+        method: 'DELETE',
+        url: car
+    }).done(function(res){
+        window.location.reload();
+    });
+});
+
 //delete service log
 $('.delete-link').on('click', function(e) {
     e.preventDefault();
@@ -129,8 +143,9 @@ $('.update-log').on('submit', function(e) {
   });
 });
 
-//draw new car options
+//car selection form
 
+//draw new car options
 $('#newCar').on('click', function(){
     $('#addCarForm').empty();
     $('#addCarForm').append('<form class="form-control" action="profile/car/new" id="carForm" method="post"></form>');
@@ -149,7 +164,6 @@ function drawYearOptions(){
     }
 
 }
-//car selection form
 
 //when you select year
 $('#addCarForm').on('change', '#carYear', function(e){

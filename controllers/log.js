@@ -173,6 +173,8 @@ router.delete('/:id', function(req, res) {
             id: req.params.id
         }
     }).then(function() {
+        req.flash('success', 'Log Deleted');
+
         res.send();
     });
 });

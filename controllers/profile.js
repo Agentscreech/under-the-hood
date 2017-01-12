@@ -35,6 +35,18 @@ router.post('/car/new', isLoggedIn, function(req,res){
     });
 });
 
+//delete car
+router.delete('/:id', isLoggedIn, function(req,res){
+    db.car.destroy(
+        {where:{
+            id: req.params.id
+            }
+        }
+    ).then(function(results){
+        req.flash('success', 'Car Deleted');
+        res.send('deleted');
+    });
+});
 
 //router for AJAX that gets data to populate the forms
 router.get('/form-data/:service', isLoggedIn, function(req, res){
