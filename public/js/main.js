@@ -129,13 +129,7 @@ $('.update-log').on('submit', function(e) {
         url: logUrl,
         data: logData
     }).done(function(data) {
-        // get data returned from the PUT route
-        console.log(data);
-
-        // do stuff when the PUT action is complete
-        // teamElement.remove();
-
-        // or, you can redirect to another page
+        // console.log(data);
         window.location.assign(data);
     });
 });
