@@ -16,6 +16,24 @@ router.get('/', isLoggedIn, function(req, res) {
 
 });
 
+//add car
+router.post('/car/new', isLoggedIn, function(req,res){
+    // console.log(req.body);
+    db.car.create(
+        {
+            year:req.body.year,
+            make:req.body.make,
+            model:req.body.model,
+            style:req.body.style,
+            userId:req.user.id,
+            styleDetails:req.body.styleDetails
+
+        }
+    ).then(function(){
+        req.flash('success', 'Car added');
+        res.redirect('/');
+    });
+});
 
 
 //router for AJAX that gets data to populate the forms

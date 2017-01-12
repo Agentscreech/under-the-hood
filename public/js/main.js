@@ -149,6 +149,7 @@ function drawYearOptions(){
     }
 
 }
+//car selection form
 
 //when you select year
 $('#addCarForm').on('change', '#carYear', function(e){
@@ -169,6 +170,8 @@ $('#addCarForm').on('change', '#carYear', function(e){
             $('#carMake').nextAll().remove();
             $('#carModel').remove();
             var make = $('#carMake').val();
+            var entryMake = $('#carMake option:selected').text();
+            console.log('this should be the make', entryMake);
             var makeNice = makes[make].niceName;
             console.log(makes[make]);
             $('#carForm').append('<label for="model">Select Model:</label>');
@@ -177,24 +180,43 @@ $('#addCarForm').on('change', '#carYear', function(e){
             drawModels(makes[make].models);
             $('#addCarForm').on('change', '#carModel', function(e2){
                 $('#carModel').nextAll().remove();
-                $('#carStyle').remove();
+                $('#carStyle').empty();
                 var model = $('#carModel').val();
+                var entryModel = $('#carModel option:selected').text();
                 var modelNice = makes[make].models[model].niceName;
                 console.log(makes[make].models[model]);
                 $('#carForm').append('<label for="style">Select Style:</label>');
                 $('#carForm').append('<select id="carStyle" class="form-select" name="style"></select>');
                 $('#carStyle').append('<option>Select Style</option>');
+                //when you select the model (next API call)
                 // var getStyle = 'https://api.edmunds.com/api/vehicle/v2/'+makeNice+'/'+modelNice+'/'+year+'/styles?fmt=json&api_key=zw4dk88j42j7keu9zeuseebm&view=full';
                 $.get('/style').done(function(stylesList){
                     styles = stylesList.styles;
                     console.log(styles);
                     drawStyles(styles);
+                    //when you select the style
+                    $('#addCarForm').on('change', '#carStyle', function(e3){
+                        styleDetails = $('#carStyle').val();
+                        var entryStyle =  $('#carStyle option:selected').text();
+                        console.log(styles[styleDetails]);
+                        //add style details to the form as hidden input
+                        $('#carForm').append('<textarea style="display:none" name="styleDetails">'+JSON.stringify(styles[styleDetails])+'</textarea>'); //TODO: change the value to styles[styleDetails].id once you can afford to make more API calls
+                        //change selected option values to strings to be set the DB
+                        var makeOption = $('<option></option>').attr('value', entryMake).text(entryMake);
+                        var modelOption = $('<option></option>').attr('value', entryModel).text(entryModel);
+                        var styleOption = $('<option></option>').attr('value', entryStyle).text(entryStyle);
+                        $('#carMake').empty().append(makeOption);
+                        $('#carModel').empty().append(modelOption);
+                        $('#carStyle').empty().append(styleOption);
+                        $('#carForm').append('<input type="submit" value="Add" class="btn btn-success btn-sm pull-right">');
+
+                    });
                 });
             });
         });
     });
 });
-//when you select the model (next API call)
+
 
 
 
@@ -221,10 +243,10 @@ function drawStyles(styles){
     styles.forEach(function(style, index){
         $('#carStyle').append('<option value='+index+'>'+style.name+'</option>');
     });
-    
+
 }
 
-//when you select makes
+
 
 
 
