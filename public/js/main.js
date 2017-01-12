@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('.addLog').click(function() {
         var form = ($(this).parent());
         // console.log(form);
-        var type = form[0].children[2]; //this gets the options div for just the car we are working on
+        var type = form[0].children[3]; //this gets the options div for just the car we are working on
         // console.log(type);
         $(type).empty();
         $(type).append('<p>Service Type:</p>');
@@ -25,16 +25,18 @@ $(document).ready(function() {
             });
         });
         //hide the non active buttons
-        var fields = form[0].children[2];
+        var fields = form[0].children[3];
         $(fields).show();
         $('.addLog').hide();
         $('.showLog').hide();
+        $('.delete-car').hide();
     });
     // reveals all non active buttons
     $('.serviceForm').on('click', '.cancel', function() {
         $('.serviceForm').hide();
         $('.addLog').show();
         $('.showLog').show();
+        $('.delete-car').show();
     });
 
 
@@ -73,9 +75,9 @@ $('.serviceForm').on('change', '.serviceName', function() {
                 $('.submenu').append("<option value=" + item.length + ">" + item.length + "</option>");
             });
         });
-    } else if (type == "other") {
-        $(option).prepend('<input class="form-control" type="text" name="other" placeholder="coolant flush"></input>');
-        $(option).prepend('<p>Other:</p>');
+    // } else if (type == "other") {
+    //     $(option).prepend('<input class="form-control" type="text" name="other" placeholder="coolant flush"></input>');
+    //     $(option).prepend('<p>Other:</p>');
     }
 });
 
@@ -84,19 +86,20 @@ $('.serviceForm').on('change', '.serviceName', function() {
 
 //delete car
 
-$('.delete-car').on('click', function(e){
+$('.delete-car').on('click', function(e) {
     e.preventDefault();
     var element = $(this);
     var car = element.attr('href');
     $.ajax({
         method: 'DELETE',
         url: car
-    }).done(function(res){
+    }).done(function(res) {
         window.location.reload();
     });
 });
 
 //delete service log
+
 $('.delete-link').on('click', function(e) {
     e.preventDefault();
     console.log('delete pressed');
@@ -107,46 +110,41 @@ $('.delete-link').on('click', function(e) {
         method: 'DELETE',
         url: service
     }).done(function(data) {
-        // get data returned from the DELETE route
-        console.log(data);
-
-        // do stuff when the DELETE action is complete
-        // element.remove();
-
-        // or, you can redirect to another page
         window.location.reload();
     });
 });
 
 
 //edit service log
+
 $('.update-log').on('submit', function(e) {
-  e.preventDefault();
-  var logElement = $(this);
-  var logUrl = logElement.attr('action');
-  var logData = logElement.serialize();
-  console.log(logUrl);
-  console.log(logData);
-  $.ajax({
-    method: 'PUT',
-    url: logUrl,
-    data: logData
-  }).done(function(data) {
-    // get data returned from the PUT route
-    console.log(data);
+    e.preventDefault();
+    var logElement = $(this);
+    var logUrl = logElement.attr('action');
+    var logData = logElement.serialize();
+    console.log(logUrl);
+    console.log(logData);
+    $.ajax({
+        method: 'PUT',
+        url: logUrl,
+        data: logData
+    }).done(function(data) {
+        // get data returned from the PUT route
+        console.log(data);
 
-    // do stuff when the PUT action is complete
-    // teamElement.remove();
+        // do stuff when the PUT action is complete
+        // teamElement.remove();
 
-    // or, you can redirect to another page
-    window.location.reload();
-  });
+        // or, you can redirect to another page
+        window.location.reload();
+    });
 });
 
 //car selection form
 
 //draw new car options
-$('#newCar').on('click', function(){
+
+$('#newCar').on('click', function() {
     $('#addCarForm').empty();
     $('#addCarForm').append('<form class="form-control" action="profile/car/new" id="carForm" method="post"></form>');
     $('#carForm').append('<label for="year">Select Model Year: </label>');
@@ -155,24 +153,15 @@ $('#newCar').on('click', function(){
     drawYearOptions();
 });
 
-
-
-function drawYearOptions(){
-    var date = new Date().getFullYear();
-    for (var i = date; i > 1989 ;i--){
-        $('#carYear').append('<option value='+i+'>'+i+'</option>');
-    }
-
-}
-
 //when you select year
-$('#addCarForm').on('change', '#carYear', function(e){
+
+$('#addCarForm').on('change', '#carYear', function(e) {
     $('#carYear').nextAll().remove();
     $('#carMake').remove();
     $('#carModel').remove();
     var year = ($('#carYear').val());
-    // var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
-    $.get('/year').done(function(res){
+    var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
+    $.get('/year').done(function(res) {
         console.log(res);
         var makes = res.makes;
         $('#carForm').append('<label for="make">Select Make:</label>');
@@ -180,7 +169,7 @@ $('#addCarForm').on('change', '#carYear', function(e){
         $('#carMake').append('<option>Select Make</option>');
         drawMakes(makes);
         //when you select the make
-        $('#addCarForm').on('change', '#carMake', function(e1){
+        $('#addCarForm').on('change', '#carMake', function(e1) {
             $('#carMake').nextAll().remove();
             $('#carModel').remove();
             var make = $('#carMake').val();
@@ -192,7 +181,7 @@ $('#addCarForm').on('change', '#carYear', function(e){
             $('#carForm').append('<select id="carModel" class="form-select" name="model"></select>');
             $('#carModel').append('<option>Select Model</option>');
             drawModels(makes[make].models);
-            $('#addCarForm').on('change', '#carModel', function(e2){
+            $('#addCarForm').on('change', '#carModel', function(e2) {
                 $('#carModel').nextAll().remove();
                 $('#carStyle').empty();
                 var model = $('#carModel').val();
@@ -203,18 +192,18 @@ $('#addCarForm').on('change', '#carYear', function(e){
                 $('#carForm').append('<select id="carStyle" class="form-select" name="style"></select>');
                 $('#carStyle').append('<option>Select Style</option>');
                 //when you select the model (next API call)
-                // var getStyle = 'https://api.edmunds.com/api/vehicle/v2/'+makeNice+'/'+modelNice+'/'+year+'/styles?fmt=json&api_key=zw4dk88j42j7keu9zeuseebm&view=full';
-                $.get('/style').done(function(stylesList){
+                var getStyle = 'https://api.edmunds.com/api/vehicle/v2/'+makeNice+'/'+modelNice+'/'+year+'/styles?fmt=json&api_key=zw4dk88j42j7keu9zeuseebm&view=full';
+                $.get('/style').done(function(stylesList) {
                     styles = stylesList.styles;
                     console.log(styles);
                     drawStyles(styles);
                     //when you select the style
-                    $('#addCarForm').on('change', '#carStyle', function(e3){
+                    $('#addCarForm').on('change', '#carStyle', function(e3) {
                         styleDetails = $('#carStyle').val();
-                        var entryStyle =  $('#carStyle option:selected').text();
+                        var entryStyle = $('#carStyle option:selected').text();
                         console.log(styles[styleDetails]);
                         //add style details to the form as hidden input
-                        $('#carForm').append('<textarea style="display:none" name="styleDetails">'+JSON.stringify(styles[styleDetails])+'</textarea>'); //TODO: change the value to styles[styleDetails].id once you can afford to make more API calls
+                        $('#carForm').append('<textarea style="display:none" name="styleDetails">' + JSON.stringify(styles[styleDetails]) + '</textarea>'); //TODO: change the value to styles[styleDetails].id once you can afford to make more API calls
                         //change selected option values to strings to be set the DB
                         var makeOption = $('<option></option>').attr('value', entryMake).text(entryMake);
                         var modelOption = $('<option></option>').attr('value', entryModel).text(entryModel);
@@ -231,52 +220,40 @@ $('#addCarForm').on('change', '#carYear', function(e){
     });
 });
 
+//functions that draw options
 
+function drawYearOptions() {
+    var date = new Date().getFullYear();
+    for (var i = date; i > 1989; i--) {
+        $('#carYear').append('<option value=' + i + '>' + i + '</option>');
+    }
 
+}
 
-function drawMakes(makes){
+function drawMakes(makes) {
     var makeList = {};
-    makes.forEach(function(make, index){
+    makes.forEach(function(make, index) {
         makeList[make.name] = index;
     });
-    for(var make in makeList){
-        $('#carMake').append('<option value='+makeList[make]+'>'+make+'</option>');
+    for (var make in makeList) {
+        $('#carMake').append('<option value=' + makeList[make] + '>' + make + '</option>');
     }
 }
-function drawModels(models){
+
+function drawModels(models) {
     var modelList = {};
-    models.forEach(function(model, index){
+    models.forEach(function(model, index) {
         modelList[model.name] = index;
     });
-    for(var model in modelList){
-        $('#carModel').append('<option value='+modelList[model]+'>'+model+'</option>');
+    for (var model in modelList) {
+        $('#carModel').append('<option value=' + modelList[model] + '>' + model + '</option>');
     }
 }
-function drawStyles(styles){
+
+function drawStyles(styles) {
     var styleList = {};
-    styles.forEach(function(style, index){
-        $('#carStyle').append('<option value='+index+'>'+style.name+'</option>');
+    styles.forEach(function(style, index) {
+        $('#carStyle').append('<option value=' + index + '>' + style.name + '</option>');
     });
 
 }
-
-
-
-
-
-// function drawOptions(option){
-// option.forEach(function(item){
-//     $(option).append("<option value="+item.id+">"+item.name+"</option>");
-// });
-// }
-// else if (type == "tire"){
-//     $.get('profile/form-data/' + type).done(function(tires){
-//         $(option).prepend('<select class="form-select submenu" name="rim"></select>');
-//         $(option).prepend('<select class="form-select submenu" name="height"></select>');
-//         $(option).prepend('<select class="form-select submenu" name="width"></select>');
-//         $(option).prepend('<p>Tire Size</p>');
-//         tires.forEach(function(tire){
-//             $('.submenu[name="width"]').append("<option value="+item.id);
-//         });
-//
-//     });

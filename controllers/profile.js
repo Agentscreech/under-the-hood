@@ -31,7 +31,7 @@ router.post('/car/new', isLoggedIn, function(req,res){
         }
     ).then(function(){
         req.flash('success', 'Car added');
-        res.redirect('/');
+        res.redirect('/profile');
     });
 });
 

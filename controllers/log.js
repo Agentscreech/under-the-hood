@@ -29,11 +29,9 @@ router.get('/:id/:carId', isLoggedIn, function(req, res) {
                 ],
                 include: [db.car, db.service]
             }).then(function(services) {
-                // console.log(services);
-                if (!services) {
-                    req.flash('error', 'No services records available');
-                    res.redirect('/profile');
-                } else {
+                console.log(services);
+                // console.log(services[0].car);
+                if (services.length > 0) {
                     db.user.find({
                         where: {
                             id: services[0].car.userId
@@ -50,6 +48,9 @@ router.get('/:id/:carId', isLoggedIn, function(req, res) {
                         req.flash('error', error.message);
                         res.redirect('/profile');
                     });
+                } else {
+                    req.flash('error', 'No services records available');
+                    res.redirect('/profile');
                 }
             });
         } else {
@@ -93,8 +94,6 @@ router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
 });
 
 router.put('/edit/:carId', function(req, res) {
-    console.log('trying to update');
-    console.log(req.body);
     if(req.body['id'].length == 2){ //jshint ignore:line
         db.car_service.update({
             cost: req.body.cost,
@@ -114,7 +113,7 @@ router.put('/edit/:carId', function(req, res) {
             var toDB = {};
             for (var option in req.body) {
                 toDB[option] = req.body[option][i];
-                console.log("object to insert", toDB);
+                // console.log("object to insert", toDB);
             }
             db.car_service.update({
                 cost: toDB.cost,
@@ -129,7 +128,7 @@ router.put('/edit/:carId', function(req, res) {
                 req.flash('error', error.message);
                 res.send('error');
             });
-            console.log("this is what should have been inserted", toDB);
+            // console.log("this is what should have been inserted", toDB);
         }
     }
 
@@ -167,7 +166,7 @@ router.post('/:carId/new', isLoggedIn, function(req, res) {
 
 //delete log
 router.delete('/:id', function(req, res) {
-    console.log('trying to delete');
+    // console.log('trying to delete');
     db.car_service.destroy({
         where: {
             id: req.params.id

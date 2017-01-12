@@ -14,13 +14,13 @@
         <%var service = JSON.parse(car.serviceDetails);%>
         <h4><%=car.year%> <span class="text-capitalize"><%=car.make%> <%=car.model%> </span><%=car.style%></h4>
         <p><strong>Details:</strong></p>
-        <p><%=detail.engine.size%>L <%=detail.engine.configuration%><%=detail.engine.cylinder%> <%if(detail.engine.valve){%><%=detail.engine.totalValves%> <%=detail.engine.valve.timing%> <%=detail.engine.valve.gear%><%}%></p>
+        <p><%=detail.engine.size%>L <%=detail.engine.configuration%><%=detail.engine.cylinder%> <%if(detail.engine.valve){%><%=detail.engine.totalValves%> valve with <%=detail.engine.valve.timing%> <%=detail.engine.valve.gear%><%}%></p>
         <p>with a <%=detail.transmission.numberOfSpeeds%> speed <%=detail.transmission.transmissionType.toLowerCase()%>, <%=detail.drivenWheels%></p>
         <p>making <%=detail.engine.horsepower%> hp at <%=detail.engine.rpm.horsepower%> RPM and <%=detail.engine.torque%> ft/lbs of torque at <%=detail.engine.rpm.torque%> RPM</p>
         <p>MPG: <%=detail.MPG.city%> city <%=detail.MPG.highway%> highway </p>
         <p>Fuel grade: <%=detail.engine.fuelType%></p>
 
-        <div class=serviceSelection>
+        <div class="serviceSelection">
             <button class="btn btn-primary addLog" >Log a maintainence</button> <a href="/log/<%=user.id%>/<%=car.id%>" class="btn btn-info showLog">Show manteinence log</a> <a href="/profile/<%=car.id%>/" class='delete-car btn btn-danger'>Delete</a>
             <form class="form-group serviceForm" action="/log/<%=car.id%>/new" method="post">
 
@@ -33,25 +33,3 @@
 <div class="edmundsLogo">
     <a href="http://www.edmunds.com/?id=apis"><img src='/img/100-square-white.png'></a>
 </div>
-
-
-<!--<form class="form-control" action="profile/car/new" method="post">
-    <label for="year">Select Model Year:</label>
-    <select id="carYear" class="form-select" name="year"></select>
-
-    <label for="make">Select Make:</label>
-    <select id="carMake" class="form-select" name="make"></select>
-
-    <label for="Model">Select Model:</label>
-    <select id="carModel" class="form-select" name="model"></select>
-
-    <label for="style">Select Trim:</label>
-    <select id="#carStyle" class="form-select" name="style"></select>
-
-        <option value="ex">EX</option>
-
-
-</form>-->
-
-<!--<input type="text" name="other" >
-<option value="other">Other</option> -->
