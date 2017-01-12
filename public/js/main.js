@@ -1,8 +1,10 @@
 $('document').ready(function() {
+
+    // draws form to add service
     $('.addLog').click(function() {
         var form = ($(this).parent());
         // console.log(form);
-        var type = form[0].children[2];
+        var type = form[0].children[2]; //this gets the options div for just the car we are working on
         // console.log(type);
         $(type).empty();
         $(type).append('<p>Service Type:</p>');
@@ -22,18 +24,24 @@ $('document').ready(function() {
                 $('.serviceName').append("<option value =" + service.id + ">" + service.name + "</option>");
             });
         });
+        //hide the non active buttons
         var fields = form[0].children[2];
         $(fields).show();
         $('.addLog').hide();
         $('.showLog').hide();
     });
+    // reveals all non active buttons
     $('.serviceForm').on('click', '.cancel', function() {
         $('.serviceForm').hide();
         $('.addLog').show();
         $('.showLog').show();
     });
 
+
+
 });
+
+//draws extra options in a drop down if any
 $('.serviceForm').on('change', '.serviceName', function() {
     var form = $(this).parent();
     // console.log(form);
@@ -120,6 +128,33 @@ $('.update-log').on('submit', function(e) {
     window.location.reload();
   });
 });
+
+//draw new car options
+
+$('#newCar').on('click', function(){
+    $('#addCarForm').append('<form class="form-control" action="profile/car/new" id="carForm" method="post"></form>');
+    $('#carForm').append('<label for="year">Select Model Year: </label>');
+    $('#carForm').append('<select id="carYear" class="form-select" name="year"></select>');
+    drawYearOptions();
+});
+
+
+
+function drawYearOptions(){
+    var date = new Date().getFullYear();
+    for (var i = date; i > 1919 ;i--){
+        $('#carYear').append('<option value='+i+'>'+i+'</option>');
+    }
+
+}
+
+
+$('#addCarForm').on('change', '#carYear', function(){
+    console.log("year changed.  Do API call");
+});
+
+
+
 
 // function drawOptions(option){
 // option.forEach(function(item){

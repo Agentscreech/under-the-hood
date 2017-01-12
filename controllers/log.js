@@ -109,7 +109,7 @@ router.put('/edit/:carId', function(req, res) {
             req.flash('error', error.message);
             res.send('error');
         });
-    } else {
+    } else { //updates the DB with all objects in the list
         for (var i = 0; i < req.body["id"].length; i++) { //jshint ignore:line
             var toDB = {};
             for (var option in req.body) {
