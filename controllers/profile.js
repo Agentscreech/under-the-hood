@@ -78,17 +78,3 @@ router.get('/form-data/:service', isLoggedIn, function(req, res){
 
 
 module.exports = router;
-
-// snippet for tires
-// else if (toGet == 'tire'){
-//     db.tireSize.findAll({attributes: 'width'}).then(function(result){
-//         res.send(result);
-//     });
-
-//snippet to see if you can use a variable in the table name
-// router.get('/form-data/:service', isLoggedIn, function(req, res){
-//     var toGet = req.params.service;
-//     db[toGet].findAll().then(function(result){
-//         res.send(results);
-//     });
-// });

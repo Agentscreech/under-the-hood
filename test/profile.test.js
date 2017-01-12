@@ -26,7 +26,7 @@ describe('GET /profile', function() {
       password: 'password'
     })
     .expect(302)
-    .expect('Location', '/')
+    .expect('Location', '/profile')
     .end(function(error, res) {
       if (error) {
         done(error);

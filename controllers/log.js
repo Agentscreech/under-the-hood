@@ -91,7 +91,8 @@ router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
 });
 
 router.put('/edit/:carId', function(req, res) { //first line is to handle if there is only one log
-    if(req.body['id'].length == 2){ //jshint ignore:line
+    console.log("BODY LENGTH!!!!",req.body['id'].length);
+    if(req.body['id'].length == 1){ //jshint ignore:line
         db.car_service.update({
             cost: req.body.cost,
             mileage: req.body.mileage,
@@ -157,6 +158,7 @@ router.post('/:carId/new', isLoggedIn, function(req, res) {
         //         }
         //     });
         // }
+        req.flash('success', 'Logged successfully');
         res.redirect('/profile');
     });
 
