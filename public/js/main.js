@@ -149,11 +149,27 @@ function drawYearOptions(){
 }
 
 
-$('#addCarForm').on('change', '#carYear', function(){
-    console.log("year changed.  Do API call");
+$('#addCarForm').on('change', '#carYear', function(e){
+    var year = ($('#carYear').val());
+    // var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
+    $.get('/test').done(function(res){
+        console.log(res);
+        var modelList = {};
+        $('#carForm').append('<label for="make">Select Make:</label>');
+        $('#carForm').append('<select id="carMake" class="form-select" name="make"></select>');
+        drawMakes(res.makes);
+    });
 });
 
-
+function drawMakes(makes){
+    var makeList = {};
+    makes.forEach(function(make, index){
+        makeList[make.name] = index;
+    });
+    for(var make in makeList){
+        $('#carMake').append('<option value='+makeList[make]+'>'+make+'</option>');
+    }
+}
 
 
 // function drawOptions(option){
