@@ -43,8 +43,15 @@ router.delete('/:id', isLoggedIn, function(req,res){
             }
         }
     ).then(function(results){
-        req.flash('success', 'Car Deleted');
-        res.send('deleted');
+        //deletes the logs that were associated with the car
+        db.car_service.destroy({
+            where:{carId:req.params.id}
+        }).then(function(results){
+            req.flash('success', 'Car Deleted');
+            res.send('deleted');
+
+        });
+
     });
 });
 
