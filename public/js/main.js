@@ -271,6 +271,6 @@ function drawStyles(styles) {
 }
 
 //make flash success go away after a few seconds
-$(".alert-success").fadeTo(1000, 500).slideUp(500, function(){
-    $(".alert-success").slideUp(500);
+$(".alert").fadeTo(1000, 500).slideUp(500, function(){
+    $(".alert").slideUp(500);
 });
