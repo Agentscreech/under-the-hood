@@ -1,58 +1,54 @@
-<div class="heading">
-    <h2 class="text-center">Log for your <%=services[0].car.year%> <span class= "text-capitalize"><%=services[0].car.make%> <%=services[0].car.model%></span></h2>
-</div>
-
-
-    <!-- service.car_service.cost, .mileage, .option, .notes -->
-
-
-    <h4>Number of services: <%=services.length%></h4>
-    <p></p>
-<div class="well">
-    <div class="row">
-        <div class="col-xs-2 ">
-            <p class="text-center">Service Done:</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Cost:</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Mileage:</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Options</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Notes</p>
-        </div>
-
+<div id="viewLog">
+    <div class="heading">
+        <h2 class="text-center">Log for your <%=services[0].car.year%> <span class= "text-capitalize"><%=services[0].car.make%> <%=services[0].car.model%></span></h2>
     </div>
 
-
-
-    <% services.forEach(function(item){%>
-            <div class="row">
-                <div class="col-xs-2">
-                    <p class="text-center text-capitalize"><%=item.service.name%></p>
-                </div>
-                <div class="col-xs-2">
-                    <p class='text-center'>$<%=item.cost%></p>
-                </div>
-                <div class="col-xs-2">
-                    <p class='text-center'><%=item.mileage%></p>
-                </div>
-                <div class="col-xs-2">
-                    <p class='text-center'><%=item.option%></p>
-                </div>
-                <div class="col-xs-2">
-                    <p class ='text-center'><%=item.notes%></p>
-                </div>
-                <div className="col-xs-2">
-                    <a href="/log/<%=item.id%>" class="delete-link btn btn-danger">Delete</a>
-                </div>
+        <h4>Number of services: <%=services.length%></h4>
+        <p></p>
+    <div class="well">
+        <div class="row">
+            <div class="col-xs-2 ">
+                <p class="text-center">Service Done:</p>
             </div>
-    <%});%>
-    </div>
-<a href="/profile" class="btn btn-primary">Back to garage</a> <a href="/log/edit/<%=user.id%>/<%=services[0].car.id%>" class="btn btn-info">Edit</a>
+            <div class="col-xs-2">
+                <p class="text-center">Cost:</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Mileage:</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Options</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Notes</p>
+            </div>
 
-    <!--<%=user.name%>-->
+        </div>
+
+
+
+        <% services.forEach(function(item){%>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <p class="text-center text-capitalize"><%=item.service.name%></p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p class='text-center'>$<%=item.cost%></p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p class='text-center'><%=item.mileage%></p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p class='text-center'><%=item.option%></p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p class ='text-center'><%=item.notes%></p>
+                    </div>
+                    <div className="col-xs-2">
+                        <a href="/log/<%=item.id%>" class="delete-link btn btn-danger">Delete</a>
+                    </div>
+                </div>
+        <%});%>
+        </div>
+    <a href="/profile" class="btn btn-primary">Back to garage</a> <a href="/log/edit/<%=user.id%>/<%=services[0].car.id%>" class="btn btn-info">Edit</a>
+</div>

@@ -1,9 +1,17 @@
+@font-face {
+    font-family: acherus_grotesque
+    src: url(/css/acherus_grotesque_-_regular-webfont.woff);
+};
+#bootstrap-overrides h1, h2, h3, h4 {
+    font-family: acherus_grotesque;
+}
 body {
     background: url(../img/white_door.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+    font-family: acherus_grotesque;
 }
 
 .heading{
@@ -12,4 +20,42 @@ body {
 
 .indexImg{
   width: 100%
+}
+
+p {
+    font-family: acherus_grotesque;
+    font-size: 15pt
+}
+
+#viewLog p, #editLog p {
+  font-size: 10pt;
+}
+
+.index p {
+  font-size: 20pt;
+}
+.index h1, .profile h1 {
+  font-size: 30pt
+}
+
+#profileContainer h2 {
+  font-size: 30pt;
+}
+
+#profileContainer h3 {
+  font-size: 20pt
+}
+#profileContainer h4 {
+  font-size: 17pt;
+  font-weight: bold;
+}
+
+.alertbox {
+  position: relative;
+  
+}
+.alert {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }

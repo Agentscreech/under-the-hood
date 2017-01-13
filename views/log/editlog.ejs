@@ -1,54 +1,56 @@
-<h2 class="text-center">Log for your <%=services[0].car.year%> <span class="text-capitalize"><%=services[0].car.make%> <%=services[0].car.model%></span></h2>
+<div id="editLog">
+    <h2 class="text-center">Log for your <%=services[0].car.year%> <span class="text-capitalize"><%=services[0].car.make%> <%=services[0].car.model%></span></h2>
 
 
-    <h4>Number of services: <%=services.length%></h4>
-    <p></p>
-<div class="well">
-    <div class="row">
-        <div class="col-xs-2">
-            <p class="text-center">Service Done:</p>
+        <h4>Number of services: <%=services.length%></h4>
+        <p></p>
+    <div class="well">
+        <div class="row">
+            <div class="col-xs-2">
+                <p class="text-center">Service Done:</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Cost:</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Mileage:</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Options</p>
+            </div>
+            <div class="col-xs-2">
+                <p class="text-center">Notes</p>
+            </div>
+
         </div>
-        <div class="col-xs-2">
-            <p class="text-center">Cost:</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Mileage:</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Options</p>
-        </div>
-        <div class="col-xs-2">
-            <p class="text-center">Notes</p>
-        </div>
-
-    </div>
 
 
 
-    <form class="update-log" action="/log/edit/<%=services[0].car.id%>" method="put">
-        <% services.forEach(function(item){%>
-                <div class="row">
-                    <div class="col-xs-2 ">
-                    <input type="hidden" name="id" value="<%=item.id%>"</input>
-                        <p class="text-center text-capitalize"><%=item.service.name%></p>
+        <form class="update-log" action="/log/edit/<%=services[0].car.id%>" method="put">
+            <% services.forEach(function(item){%>
+                    <div class="row">
+                        <div class="col-xs-2 ">
+                        <input type="hidden" name="id" value="<%=item.id%>"</input>
+                            <p class="text-center text-capitalize"><%=item.service.name%></p>
+                        </div>
+                        <div class="col-xs-2">
+                            <input class='text-center form-control' type="number" name="cost" value="<%=item.cost%>"></input>
+                        </div>
+                        <div class="col-xs-2">
+                            <input class='text-center form-control' type="number" name="mileage" value="<%=item.mileage%>"></input>
+                        </div>
+                        <div class="col-xs-2">
+                            <input class='text-center form-control' type="text" name="option" value="<%=item.option%>"></input>
+                        </div>
+                        <div class="col-xs-2">
+                            <input class='text-center form-control' type="text" name="notes" value="<%=item.notes%>"></input>
+                        </div>
+                        <div class="col-xs-2">
+                        </div>
                     </div>
-                    <div class="col-xs-2">
-                        <input class='text-center form-control' type="number" name="cost" value="<%=item.cost%>"></input>
-                    </div>
-                    <div class="col-xs-2">
-                        <input class='text-center form-control' type="number" name="mileage" value="<%=item.mileage%>"></input>
-                    </div>
-                    <div class="col-xs-2">
-                        <input class='text-center form-control' type="text" name="option" value="<%=item.option%>"></input>
-                    </div>
-                    <div class="col-xs-2">
-                        <input class='text-center form-control' type="text" name="notes" value="<%=item.notes%>"></input>
-                    </div>
-                    <div class="col-xs-2">
-                    </div>
-                </div>
-        <%});%>
-        <input class="btn btn-success" type="submit" name="Submit" value="Update">
-    </form>
-    </div>
-<a href="/profile" class="btn btn-primary">Back to garage</a>
+            <%});%>
+            <input class="btn btn-success" type="submit" name="Submit" value="Update">
+        </form>
+        </div>
+    <a href="/profile" class="btn btn-primary">Back to garage</a>
+</div>
