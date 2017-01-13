@@ -154,7 +154,7 @@ $('#addCarForm').on('change', '#carYear', function(e) {
     $('#carMake').remove();
     $('#carModel').remove();
     var year = $('#carYear').val();
-    var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
+    var getYear = 'https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
     // change this to '/year' for test data or getYear for API return
     $.get(getYear).done(function(res) {
         // console.log(res);
