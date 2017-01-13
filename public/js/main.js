@@ -155,7 +155,8 @@ $('#addCarForm').on('change', '#carYear', function(e) {
     $('#carModel').remove();
     var year = $('#carYear').val();
     var getYear = 'http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
-    $.get('/year').done(function(res) {
+    // change this to '/year' for test data or getYear for API return
+    $.get(getYear).done(function(res) {
         // console.log(res);
         makes = res.makes;
         $('#carForm').append('<label for="make">Select Make:</label>');
@@ -203,7 +204,8 @@ $('#addCarForm').on('change', '#carModel', function(e2) {
 });
 
 function getStyles(getStyle){
-    $.get('/style').done(function(stylesList) {
+    //change to '/style' for test data or getStyle for API call
+    $.get(getStyle).done(function(stylesList) {
         styles = stylesList.styles;
         // console.log(styles);
         drawStyles(styles);
