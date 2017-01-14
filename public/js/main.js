@@ -8,14 +8,14 @@ $(document).ready(function() {
         // console.log(type);
         $(type).empty();
         $(type).append('<p>Service Type:</p>');
-        $(type).append('<select class="form-control serviceName" name="serviceId"><option>Select Type</option></select>');
+        $(type).append('<select class="form-control serviceName" name="serviceId" required></select>');
         $(type).append('<div class="option"></div>');
         $(type).append('<p>Cost:</p>');
-        $(type).append('<input class="form-control" type="number" name="cost" placeholder="19.99"></input>');
+        $(type).append('<input class="form-control" type="number" name="cost" placeholder="19" required></input>');
         $(type).append('<p>Mileage:</p>');
-        $(type).append('<input class="form-control" type="number" name="mileage" placeholder="804450"></input>');
+        $(type).append('<input class="form-control" type="number" name="mileage" placeholder="804450" required></input>');
         $(type).append('<p>Notes:</p>');
-        $(type).append('<input class="form-control" type="text" name="notes" placeholder="place was closed Sundays"></input>');
+        $(type).append('<input class="form-control" type="text" name="notes" placeholder="optional"></input>');
         $(type).append('<button type="submit" class="btn btn-success">Add</button>');
         $(type).append('<button type="button" class="btn btn-warning cancel">Cancel</button>');
 
@@ -210,27 +210,27 @@ function getStyles(getStyle){
         // console.log(styles);
         drawStyles(styles);
         //when you select the style
-        $('#addCarForm').on('change', '#carStyle', function(e3) {
-            styleDetails = $('#carStyle').val();
-            var entryMake = $('#carMake option:selected').text();
-            var entryModel = $('#carModel option:selected').text();
-            var entryStyle = $('#carStyle option:selected').text();
-            // console.log(styles[styleDetails]);
-            //add style details to the form as hidden input
-            $('#carForm').append('<textarea style="display:none" name="styleDetails">' + JSON.stringify(styles[styleDetails]) + '</textarea>'); //TODO: change the value to styles[styleDetails].id once you can afford to make more API calls
-            //change selected option values to strings to be set the DB
-            var makeOption = $('<option></option>').attr('value', entryMake).text(entryMake);
-            var modelOption = $('<option></option>').attr('value', entryModel).text(entryModel);
-            var styleOption = $('<option></option>').attr('value', entryStyle).text(entryStyle);
-            $('#carMake').empty().append(makeOption);
-            $('#carModel').empty().append(modelOption);
-            $('#carStyle').empty().append(styleOption);
-            $('#carForm').append('<input type="submit" value="Add" class="btn btn-success btn-sm pull-right">');
-
-        });
     });
 }
 
+$('#addCarForm').on('change', '#carStyle', function(e3) {
+    styleDetails = $('#carStyle').val();
+    var entryMake = $('#carMake option:selected').text();
+    var entryModel = $('#carModel option:selected').text();
+    var entryStyle = $('#carStyle option:selected').text();
+    // console.log(styles[styleDetails]);
+    //add style details to the form as hidden input
+    $('#carForm').append('<textarea style="display:none" name="styleDetails">' + JSON.stringify(styles[styleDetails]) + '</textarea>'); //TODO: change the value to styles[styleDetails].id once you can afford to make more API calls
+    //change selected option values to strings to be set the DB
+    var makeOption = $('<option></option>').attr('value', entryMake).text(entryMake);
+    var modelOption = $('<option></option>').attr('value', entryModel).text(entryModel);
+    var styleOption = $('<option></option>').attr('value', entryStyle).text(entryStyle);
+    $('#carMake').empty().append(makeOption);
+    $('#carModel').empty().append(modelOption);
+    $('#carStyle').empty().append(styleOption);
+    $('#carForm').append('<input type="submit" value="Add" class="btn btn-success btn-xs pull-right">');
+
+});
 
 //functions that draw options
 
