@@ -19,9 +19,6 @@ var services = [
     {
         name:"wiper",
     },
-    // {
-    //     name:"tire",
-    // },
     {
         name:"air filter"
     },
@@ -36,11 +33,7 @@ var services = [
     },
     {
         name:"brakes"
-    },
-    // {
-    //     name:"other"
-    // },
-
+    }
 ];
 
 function buildServices(item){

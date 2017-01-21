@@ -18,7 +18,6 @@ router.get('/', isLoggedIn, function(req, res) {
 
 //add car
 router.post('/car/new', isLoggedIn, function(req,res){
-    // console.log(req.body);
     db.car.create(
         {
             year:req.body.year,
