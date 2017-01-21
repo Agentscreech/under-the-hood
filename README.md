@@ -34,7 +34,7 @@ In the log page, all the buttons are self explanatory.
 
 ### Technologies
 
-This is running a [Node.js](https://nodejs.org/en/) with [Express]http://expressjs.com/ and [Sequelize](http://docs.sequelizejs.com/en/v3/) backend.
+This is running a [Node.js](https://nodejs.org/en/) with [Express](http://expressjs.com/) and [Sequelize](http://docs.sequelizejs.com/en/v3/) backend.
 
 Front end is [jQuery](https://jquery.com/) and styled with [Boostrap](https://getbootstrap.com/).
 
