@@ -27,20 +27,16 @@ router.get('/:id/:carId', isLoggedIn, function(req, res) {
                 ],
                 include: [db.car, db.service]
             }).then(function(services) {
-                // console.log(services);
                 if (services.length > 0) {
                     db.user.find({
                         where: {
                             id: services[0].car.userId
                         }
                     }).then(function(user) {
-                        // console.log(user);
-                        // console.log(services[0].service.name);
                         res.render('log/showlog', {
                             user: user,
                             services: services
                         });
-                        // res.send(services);
                     }).catch(function(err) {
                         req.flash('error', error.message);
                         res.redirect('/profile');
@@ -60,7 +56,6 @@ router.get('/:id/:carId', isLoggedIn, function(req, res) {
 
 //update log
 router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
-    // res.send(req.body);
     db.car.find({
         where: {
             id: req.params.carId
@@ -91,7 +86,6 @@ router.get('/edit/:id/:carId', isLoggedIn, function(req, res) {
 });
 
 router.put('/edit/:carId', function(req, res) { //first line is to handle if there is only one log
-    console.log("BODY LENGTH!!!!",req.body['id'].length);
     if(req.body['id'].length == 1){ //jshint ignore:line
         db.car_service.update({
             cost: req.body.cost,
@@ -111,7 +105,6 @@ router.put('/edit/:carId', function(req, res) { //first line is to handle if the
             var toDB = {};
             for (var option in req.body) {
                 toDB[option] = req.body[option][i];
-                // console.log("object to insert", toDB);
             }
             db.car_service.update({
                 cost: toDB.cost,
@@ -126,13 +119,11 @@ router.put('/edit/:carId', function(req, res) { //first line is to handle if the
                 req.flash('error', error.message);
                 res.send('error');
             });
-            // console.log("this is what should have been inserted", toDB);
         }
     }
 
     req.flash('success', 'Update successful');
     var url = "/log/"+req.user.id+"/"+req.params.carId;
-    console.log('trying to send ', url);
     res.send(url);
 
 });
@@ -151,13 +142,6 @@ router.post('/:carId/new', isLoggedIn, function(req, res) {
         notes: req.body.notes,
         option: req.body.option
     }).then(function(test) {
-        // if(req.body.other){
-        //     db.other.findOrCreate({
-        //         where:{
-        //             name:req.body.other
-        //         }
-        //     });
-        // }
         req.flash('success', 'Logged successfully');
         res.redirect('/profile');
     });
@@ -167,7 +151,6 @@ router.post('/:carId/new', isLoggedIn, function(req, res) {
 
 //delete log
 router.delete('/:id', function(req, res) {
-    // console.log('trying to delete');
     db.car_service.destroy({
         where: {
             id: req.params.id

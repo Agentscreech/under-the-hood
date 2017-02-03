@@ -3,9 +3,7 @@ $(document).ready(function() {
     // draws form to add service
     $('.addLog').click(function() {
         var form = ($(this).parent());
-        // console.log(form);
         var type = form[0].children[3]; //this gets the options div for just the car we are working on
-        // console.log(type);
         $(type).empty();
         $(type).append('<p>Service Type:</p>');
         $(type).append('<select class="form-control serviceName" name="serviceId" required></select>');
@@ -46,10 +44,8 @@ $(document).ready(function() {
 //draws extra options in a drop down if any
 $('.serviceForm').on('change', '.serviceName', function() {
     var form = $(this).parent();
-    // console.log(form);
     var type = $(this).find('option:selected').text();
     var option = form[0].childNodes[2]; //this should target the option div for active car only
-    // console.log(option);
     $(option).empty();
     if (type == "fuel") {
         $.get('profile/form-data/' + type).done(function(fuel) {
@@ -102,10 +98,8 @@ $('.delete-car').on('click', function(e) {
 
 $('.delete-link').on('click', function(e) {
     e.preventDefault();
-    console.log('delete pressed');
     var element = $(this);
     var service = element.attr('href');
-    console.log(service);
     $.ajax({
         method: 'DELETE',
         url: service
@@ -122,14 +116,11 @@ $('.update-log').on('submit', function(e) {
     var logElement = $(this);
     var logUrl = logElement.attr('action');
     var logData = logElement.serialize();
-    // console.log(logUrl);
-    // console.log(logData);
     $.ajax({
         method: 'PUT',
         url: logUrl,
         data: logData
     }).done(function(data) {
-        // console.log(data);
         window.location.assign(data);
     });
 });
@@ -157,7 +148,6 @@ $('#addCarForm').on('change', '#carYear', function(e) {
     var getYear = 'https://api.edmunds.com/api/vehicle/v2/makes?fmt=json&year='+year+'&api_key=zw4dk88j42j7keu9zeuseebm';
     // change this to '/year' for test data or getYear for API return
     $.get(getYear).done(function(res) {
-        // console.log(res);
         makes = res.makes;
         $('#carForm').append('<label for="make">Select Make:</label>');
         $('#carForm').append('<select id="carMake" class="form-select" name="make"></select>');
@@ -173,9 +163,7 @@ $('#addCarForm').on('change', '#carMake', function(e1) {
     $('#carModel').remove();
     var make = $('#carMake').val();
     var entryMake = $('#carMake option:selected').text();
-    // console.log('this should be the make', entryMake);
     var makeNice = makes[make].niceName;
-    // console.log(makes[make]);
     $('#carForm').append('<label for="model">Select Model:</label>');
     $('#carForm').append('<select id="carModel" class="form-select" name="model"></select>');
     $('#carModel').append('<option>Select Model</option>');
@@ -194,7 +182,6 @@ $('#addCarForm').on('change', '#carModel', function(e2) {
     var entryModel = $('#carModel option:selected').text();
     var makeNice = makes[make].niceName;
     var modelNice = makes[make].models[model].niceName;
-    // console.log(makes[make].models[model]);
     $('#carForm').append('<label for="style">Select Style:</label>');
     $('#carForm').append('<select id="carStyle" class="form-select" name="style"></select>');
     $('#carStyle').append('<option>Select Style</option>');
@@ -207,18 +194,16 @@ function getStyles(getStyle){
     //change to '/style' for test data or getStyle for API call
     $.get(getStyle).done(function(stylesList) {
         styles = stylesList.styles;
-        // console.log(styles);
         drawStyles(styles);
-        //when you select the style
     });
 }
 
+//when you select the style
 $('#addCarForm').on('change', '#carStyle', function(e3) {
     styleDetails = $('#carStyle').val();
     var entryMake = $('#carMake option:selected').text();
     var entryModel = $('#carModel option:selected').text();
     var entryStyle = $('#carStyle option:selected').text();
-    // console.log(styles[styleDetails]);
     //add style details to the form as hidden input
     $('#carForm').append('<textarea style="display:none" name="styleDetails">' + JSON.stringify(styles[styleDetails]) + '</textarea>'); //TODO: change the value to styles[styleDetails].id once you can afford to make more API calls
     //change selected option values to strings to be set the DB
